@@ -1,0 +1,102 @@
+.page_column .page_wrap {
+  padding-bottom: 0;
+}
+.page_column .column_wrap {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
+}
+.page_column .column_wrap h3 {
+  background: #ff4cc0;
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.page_column_single p {
+  /* margin-top: 20px; */
+  margin-top: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+  position: relative;
+  text-align: justify;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+.page_column_single img {
+  width: 50% !important;
+  height: auto !important;
+}
+
+.page_column_archive .page_wrap {
+  padding-bottom: 20px;
+}
+.page_column_archive .column_wrap {
+  padding-bottom: 0px;
+}
+.page_column_archive .review-page-nav {
+  margin-top: 40px;
+}
+.page_column_archive ul li {
+  /* margin-top: 40px; */
+}
+.page_column_archive ul li .active {
+  margin-top: 10px;
+}
+.page_column_archive ul li:nth-child(1) {
+  margin-top: 0;
+}
+.page_column_archive ul li h3 {
+  display: flex;
+  justify-content: space-between;
+}
+.page_column_archive ul li p {
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 16px;
+  max-height: 5em;
+  position: relative;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* &::after {
+  	content: "...";
+  	line-height: 1;
+  	position: absolute;
+  	right: 0;
+  	bottom: 0;
+  	background: #000;
+  	color: white;
+  	padding-top: 5px;
+  } */
+}
+.page_column_archive ul li img {
+  display: none;
+}
+.page_column_archive ul li a {
+  color: #ff4cc0;
+  text-align: right;
+  display: block;
+  margin-top: 10px;
+}
+
+.cut_column_txt {
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 16px;
+  max-height: 5em;
+  position: relative;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}/*# sourceMappingURL=column.css.map */

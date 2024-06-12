@@ -1,0 +1,135 @@
+// 出勤情報
+.schedule {
+  .section-title {
+    margin-bottom: 32rem;
+  }
+
+  .date-selector {
+    position: sticky;
+    top: 110rem;
+    z-index: 100;
+    margin-bottom: 32rem;
+
+    @include pc {
+      max-width: 1200px;
+      margin: 0 auto;
+      top: 28rem;
+    }
+
+
+    .item {
+      padding: 0;
+      background-color: #efefef;
+      background-image: linear-gradient(to bottom, #fafafa 0%, #eeeeee 52%, #b9b9b9 56%, #d6d6d6 100%);
+      color: #d60a0a;
+      font-size: 32rem;
+      @include pc {
+        font-size: 12rem;
+        width: 14.28% !important;
+      }
+
+      &:not(:last-child) {
+        border-right: 1rem solid #777;
+      }
+    }
+
+    .swiper-slide-thumb-active {
+      background-color: #b4b4b4;
+      background-image: linear-gradient(to bottom, #b8b8b8 0%, #919191 47%, #737373 52%, #a3a3a3 100%);
+      color: #fff;
+    }
+  }
+
+  .filter {
+    margin-bottom: 32rem;
+    border-top: 1rem solid $c_pink;
+  }
+}
+
+.girl {
+  opacity: 1;
+}
+
+
+.girl.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+/* .girl.is-hidden .link{
+  display: none;
+} */
+
+.girl.is-btn-hidden {
+  display: none;
+}
+
+.schedule-text {
+  font-size: 32rem;
+  margin-bottom: 15px;
+  width: 96%;
+  background: $c_pink;
+  margin: 20px auto;
+  padding: 4px 10px;
+  @include pc {
+    display: none;
+  }
+}
+
+.pager-nav,
+.review-page-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.pager-nav li,
+.review-page-nav li {
+  margin-right: 8px;
+}
+
+.pager-nav li.active a,
+.review-page-nav li.active a {
+  background: $c_pink;
+  color: #fff;
+
+}
+
+.pager-nav li:last-child,
+.review-page-nav li:last-child {
+  margin-right: 0;
+}
+
+.pager-nav a,
+.review-page-nav a {
+  display: block;
+  border: 1px solid $c_pink;
+  color: $c_pink;
+  background-color: #000;
+  padding: 10px 10px;
+  font-weight: bold;
+  @include pc {
+    font-size: 11rem;
+  }
+}
+
+.pager-nav a:hover,
+.review-page-nav a:hover {
+  background: $c_pink;
+  color: #fff;
+}
+
+.schedule-link {
+  padding: 16rem 0;
+  display: block;
+
+  @include pc {
+    padding: 11rem 0;
+  }
+}

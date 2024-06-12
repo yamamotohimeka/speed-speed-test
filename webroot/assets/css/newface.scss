@@ -1,0 +1,51 @@
+@import "mixin";
+
+.nf_2col {
+  padding: 0 24px 0 24px;
+  width: auto;
+  margin-top: 0;
+  border: none;
+}
+
+.review-page-nav {
+  margin-top: 0;
+}
+
+.nf .nf_col {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.outer {
+  flex-flow: wrap;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 562px;
+  }
+}
+
+.sort_radio {
+  margin-bottom: 20px;
+}
+
+.review-page-nav {
+  margin-top: 20px;
+}
+
+.btn_submit {
+  input {
+    background: $pink;
+    width: 100px;
+    height: 32px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.newface-container {
+  width: 1145px;
+  margin: 20px auto 0;
+}

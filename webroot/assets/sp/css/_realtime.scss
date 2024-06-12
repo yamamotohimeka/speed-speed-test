@@ -1,0 +1,153 @@
+// 待ち時間情報
+.realtime {
+  .section-title {
+    margin-bottom: 32rem;
+  }
+
+  .realtime-toggle {
+    position: sticky;
+    top: 107rem;
+
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16rem 0;
+    margin-bottom: 20rem;
+    font-size: 36rem;
+    font-weight: 600;
+    text-align: center;
+
+    @include pc {
+      max-width: 1200px;
+      margin: 0 auto 10rem auto;
+      font-size: 14rem;
+      padding: 8rem 0;
+      top: 28rem;
+    }
+
+    &::after {
+      content: "";
+      width: 14rem;
+      height: 14rem;
+      border-left: 4rem solid #fff;
+      border-bottom: 4rem solid #fff;
+      position: absolute;
+      right: 20rem;
+      top: 45%;
+      transition: 0.2s ease;
+      transform: rotate(135deg);
+      @include pc {
+        width: 6rem;
+        height: 6rem;
+        border-left: 2rem solid #fff;
+        border-bottom: 2rem solid #fff;
+      }
+    }
+
+    // トグル動作
+    &.hide {
+      & + .girl-list * {
+        padding: 0;
+        margin: 0;
+        height: 0;
+        font-size: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, height 0.2s ease;
+      }
+
+      &::after {
+        top: calc(50% - 10rem);
+        transform: rotate(-45deg);
+        @include pc {
+          top: calc(50% - 7rem);
+        }
+      }
+    }
+  }
+
+
+  &-count {
+    display: inline-block;
+    margin-left: 1em;
+    background-color: rgba(#000, 0.24);
+    color: #fff;
+    font-size: 24rem;
+    font-weight: 400;
+    border-radius: 8rem;
+    padding: 2rem 8rem 4rem;
+
+    @include pc {
+      font-size: 14rem;
+    }
+  }
+
+  // トグルスイッチの色分け
+  .group1 {
+    background-color: #daa520;
+  }
+
+  .group2 {
+    background-color: #7319ff;
+  }
+
+  .group3 {
+    background-color: #00c101;
+  }
+
+  .group4 {
+    background-color: #bb012d;
+  }
+
+  .group5 {
+    background-color: #ff732b;
+  }
+
+  .group6 {
+    background-color: #a700cd;
+  }
+
+  .group7 {
+    background-color: #2c00b2;
+  }
+
+  .group8 {
+    background-color: #261e1c;
+  }
+
+  .group9 {
+    background-color: #fa0068;
+  }
+
+  .group10 {
+    background-color: #0097dd;
+  }
+
+  .group11 {
+    background-color: #c92800;
+  }
+
+  .group12 {
+    color: $c_pink;
+    background-color: #fff;
+
+    &::after {
+      border-color: $c_pink;
+    }
+  }
+
+  .group13 {
+    background-color: #3cb371;
+  }
+
+
+  .girl-list {
+    overflow: hidden;
+
+    * {
+      transition: opacity 0.2s ease;
+    }
+  }
+
+}

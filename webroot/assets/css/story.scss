@@ -1,0 +1,60 @@
+@import "mixin";
+
+.page_story {
+
+  .review-page-nav {
+    margin-top: 20px;
+  }
+
+  .shop-list {
+    margin-bottom: 20px;
+  }
+
+  .story_wrap {
+    height: auto;
+    border: none;
+    overflow-y: auto;
+    width: auto;
+    background: #fff;
+  }
+
+  .icon_col {
+    width: 500px;
+  }
+
+  .story_col {
+    padding-top: 20px;
+    border: solid 3px transparent;
+    border-image: url(../img/common/bd.png) 1 stretch;
+
+    .content {
+      justify-content: flex-start;
+
+      .pic {
+        display: inline-block;
+        width: 500px;
+        margin-right: 20px;
+
+        img,
+        video {
+          margin-top: 0;
+          width: 100%;
+        }
+
+        video {
+          width: 100%;
+        }
+
+        .date {
+          text-align: right;
+          @include txt(#FF4CC0, 14px, 1, 0em);
+        }
+      }
+
+      .pic+p {
+        max-width: 630px;
+      }
+    }
+  }
+
+}

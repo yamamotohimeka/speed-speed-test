@@ -1,0 +1,293 @@
+@charset "UTF-8";
+.page_system .swiper-container {
+  width: 304px;
+  padding-bottom: 50px;
+}
+.page_system .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+}
+.page_system .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 15px;
+}
+.page_system .system_wrap .system_col {
+  border: solid 2px transparent;
+  -o-border-image: url(../img/common/bd.png) 1 stretch;
+     border-image: url(../img/common/bd.png) 1 stretch;
+}
+.page_system .system_wrap .wrap_01 {
+  padding: 60px 100px 50px;
+}
+.page_system .system_wrap .wrap_01 h3 {
+  background: #FFA100;
+  color: #fff;
+  padding: 8px 17px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.page_system .system_wrap .wrap_01 .blk01 dl {
+  margin-bottom: 40px;
+  border-bottom: 2px solid #FFA100;
+  border-right: 2px solid #FFA100;
+  font-size: 18px;
+}
+.page_system .system_wrap .wrap_01 .blk01 dl > div {
+  background: #323232;
+  align-items: center;
+  border-left: 2px solid #FFA100;
+  border-top: 2px solid #FFA100;
+}
+.page_system .system_wrap .wrap_01 .blk01 dl span {
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+.page_system .system_wrap .wrap_01 .blk01 dl span p a {
+  color: #eea623;
+  text-decoration: underline !important;
+}
+.page_system .system_wrap .wrap_01 .blk01 dl dt {
+  padding: 10px;
+  width: 300px;
+  font-weight: lighter;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  border-right: 2px solid #FFA100;
+}
+.page_system .system_wrap .wrap_01 .blk01 dl dd {
+  width: 300px;
+  text-align: center;
+  color: #fff;
+}
+.page_system .system_wrap .wrap_01 .blk01 .card {
+  text-align: center;
+}
+.page_system .system_wrap .wrap_01 .blk02 dl {
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+}
+.page_system .system_wrap .wrap_01 .blk02 dl dt,
+.page_system .system_wrap .wrap_01 .blk02 dl dd {
+  font-weight: normal;
+}
+.page_system .system_wrap .wrap_02 {
+  padding: 0 100px 50px;
+}
+.page_system .system_wrap .wrap_02 .blk01 {
+  width: 100%;
+}
+.page_system .system_wrap .wrap_02 .blk01 h3 {
+  font-size: 24px;
+  letter-spacing: 0;
+  text-align: center;
+}
+.page_system .system_wrap .wrap_02 .blk01 dl {
+  margin-left: 10px;
+}
+.page_system .system_wrap .wrap_02 .blk01 dt,
+.page_system .system_wrap .wrap_02 .blk01 dd {
+  font-size: 34px;
+}
+.page_system .system_wrap .wrap_02 .blk01 h3 + p {
+  font-size: 24px;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.page_system .system_wrap .wrap_02 .blk01 table {
+  width: 100%;
+}
+.page_system .system_wrap .wrap_02 .blk01 table th {
+  text-align: center;
+}
+.page_system .system_wrap .wrap_02 .blk01 table td {
+  padding: 0.5em 0;
+  text-align: center;
+  width: 50%;
+}
+.page_system .system_wrap .wrap_02 .blk01 table thead tr {
+  font-size: 20px;
+}
+.page_system .system_wrap .wrap_02 .blk01 table thead tr h3 {
+  font-size: 24px;
+  letter-spacing: 0;
+}
+.page_system .system_wrap .wrap_02 .blk01 table thead:after {
+  content: "";
+  height: 0.5em;
+  width: 100%;
+  padding: 2px 0;
+  display: block;
+}
+.page_system .system_wrap .wrap_02 .blk01 table tbody tr {
+  border: 1px solid;
+}
+.page_system .system_wrap .wrap_02 .blk01 table tbody tr td:first-child {
+  background: rgba(255, 161, 0, 0.5411764706);
+  color: #fff;
+}
+.page_system .system_wrap .wrap_02 .blk01 .price_01 {
+  color: #FFA100;
+  padding: 1em;
+  width: 100%;
+}
+.page_system .system_wrap .wrap_02 .blk01 .price_01 td:first-child {
+  background: rgba(255, 161, 0, 0.5411764706);
+  color: #fff;
+}
+.page_system .system_wrap .wrap_02 .blk01 .price_02 {
+  margin-top: 60px;
+  color: #FF2F98;
+}
+.page_system .system_wrap .wrap_02 .blk01 .price_02 td:first-child {
+  background: rgba(255, 47, 152, 0.5411764706);
+  color: #fff;
+}
+.page_system .system_wrap .wrap_02 .blk01 .price_03 {
+  margin-top: 60px;
+  color: #2586FF;
+}
+.page_system .system_wrap .wrap_02 .blk01 .price_03 td:first-child {
+  background: rgba(37, 134, 255, 0.5411764706);
+  color: #fff;
+}
+.page_system .system_wrap .wrap_02 .blk01 p.alert {
+  font-size: 22px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  line-height: 1.6;
+  margin-top: 260px;
+}
+.page_system .system_wrap .wrap_02 .blk02 {
+  margin-top: 4em;
+  width: 100%;
+  padding: 34px;
+  border: solid 2px transparent;
+  -o-border-image: url(../img/common/bd.png) 1 stretch;
+     border-image: url(../img/common/bd.png) 1 stretch;
+}
+.page_system .system_wrap .wrap_02 .blk02__option {
+  background: #FFA100;
+  color: #fff;
+  padding: 2px 0;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.page_system .system_wrap .wrap_02 .blk02 .flex {
+  justify-content: flex-start;
+  flex-flow: wrap;
+  gap: 5.7%;
+}
+.page_system .system_wrap .wrap_02 .blk02 .flex li {
+  margin-bottom: 30px;
+  width: 191px;
+}
+.page_system .system_wrap .wrap_02 .blk02 h3 {
+  background: #FFA100;
+  font-size: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.page_system .system_wrap .wrap_02 .blk02 .txt {
+  text-align: center;
+  font-size: 20px;
+}
+
+.half-heart {
+  position: relative;
+  margin-left: 10px;
+}
+.half-heart::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 12px;
+  width: 12px;
+  height: 30px;
+  background: #000;
+}
+
+.dd-small {
+  font-size: 20px;
+}
+
+.dd-pink {
+  padding: 5px;
+  background-color: #FF2F98;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.fuyo {
+  position: relative;
+}
+.fuyo::before {
+  position: absolute;
+  content: "付与";
+  font-size: 20px;
+  top: -40px;
+  left: 23px;
+  color: #FF2F98;
+}
+
+.dd-yellow {
+  padding: 5px;
+  background-color: #FFA100;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.dd-blue {
+  padding: 5px;
+  background-color: #2586FF;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.halfheart {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
+  margin-right: -5px;
+}
+
+.pic {
+  width: 191px;
+  height: 119px;
+}
+.pic img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.system-btn-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.system-prev,
+.system-next {
+  width: 24px;
+}/*# sourceMappingURL=system.css.map */

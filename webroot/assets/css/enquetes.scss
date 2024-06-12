@@ -1,0 +1,96 @@
+@import "mixin";
+
+.enq_wrap {
+  border: solid 3px transparent;
+  border-image: url(../img/common/bd.png) 1 stretch;
+  padding: 50px 50px;
+
+  .enq_txt {
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    width: 1056px;
+    margin: 0 auto 40px;
+  }
+
+  >div {
+    justify-content: center;
+  }
+
+  dl {
+    >div {
+      margin-bottom: 40px;
+      align-items: center;
+    }
+
+    div:last-child {
+      align-items: flex-start;
+    }
+
+    .enq_radio {
+      justify-content: start;
+
+      .radio02 {
+        font-size: 20px;
+      }
+
+      .radio02::after {
+        top: 7px;
+      }
+    }
+
+    dt {
+      width: 162px;
+      margin-right: 20px;
+      white-space: nowrap;
+      @include txt(#fff, 20px, 1, 0em);
+    }
+
+    dd {
+      display: inline-block;
+      width: 85%;
+      word-break: break-all;
+
+      input,
+      textarea {
+        background: #fff;
+        width: 874px;
+        height: 36px;
+        color: #000;
+        padding-left: 10px;
+      }
+
+      textarea {
+        height: 214px;
+      }
+
+    }
+  }
+
+  .submit {
+    text-align: center;
+    @include txt(#fff, 20px, 1, 0em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      background: $orange;
+      width: 201px;
+      border-radius: 3px;
+      margin-left: 10px;
+      @include txt(#fff, 16px, 1, 0em);
+      height: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.enq_box {
+  width: 100%;
+}
+
+.enq_padding {
+  padding: 50px 200px;
+}

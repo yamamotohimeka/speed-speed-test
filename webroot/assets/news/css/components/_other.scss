@@ -1,0 +1,57 @@
+.other{
+  .section-title{
+    @include tab {
+      font-size:calc(44vw / (768 / 100));
+    }
+  }
+  &__box{
+    margin: 50px auto 20px;
+    padding: 18px 0 22px;
+    width: 940px;
+    border: 1px solid $yellow;
+    border-radius: 10px;
+    @include pc {
+      margin:calc(50vw / (1040 / 100)) auto calc(20vw / (1040 / 100));
+      padding:calc(18vw / (1040 / 100)) 0 calc(22vw / (1040 / 100));
+      width:calc(940vw / (1040 / 100));
+      border-radius:calc(10vw / (1040 / 100));
+    }
+    h3{
+      margin-bottom: 10px;
+      font-size: 38px;
+      color: #fff;
+      @include pc {
+        margin-bottom:calc(10vw / (1040 / 100));
+        font-size:calc(38vw / (1040 / 100));
+      }
+      @include tab {
+        margin-bottom:calc(10vw / (768 / 100));
+        font-size:calc(31vw / (768 / 100));
+      }
+    }
+    h5{
+      font-size: 22px;
+      line-height: 1.6;
+      font-family: "Hiragino Sans","ヒラギノ角ゴシック"; font-weight: 300;
+      @include pc {
+        font-size:calc(22vw / (1040 / 100));
+      }
+      @include tab {
+        font-size:calc(21vw / (768 / 100));
+      }
+    }
+  }
+  p{
+    margin-bottom: 140px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    @include pc {
+      margin-bottom:calc(140vw / (1040 / 100));
+      font-size:calc(20vw / (1040 / 100));
+    }
+    @include tab {
+      font-size:calc(23vw / (768 / 100));
+    }
+  }
+}

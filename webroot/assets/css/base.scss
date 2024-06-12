@@ -1,0 +1,2013 @@
+@import "mixin";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    color: orange;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  letter-spacing: 0.1em;
+  font-family: -apple-system, BlinkMacSystemFont, YuGothic, "游ゴシック体", "游ゴシック", "Yu Gothic Medium", "Yu Gothic", sans-serif;
+  font-variant-ligatures: none;
+  @include txt;
+  background: url("../img/common/bg_dot.png") repeat;
+}
+
+///////////////////////////////
+//汎用共通パーツここから
+///////////////////////////////
+
+/*------------------
+メインコンテンツ幅
+---------------------*/
+main {
+  width: 1294px;
+  @include center;
+  padding-left: 47px;
+  padding-right: 47px;
+  background: #000;
+  padding-bottom: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+/*------------------
+背景画像
+---------------------*/
+.bg_img {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.side_bnr {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  height: 30vh;
+
+  li {
+    height: 80%;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+/*------------------
+横並び
+---------------------*/
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*------------------
+スクロールバー
+---------------------*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(80, 80, 80, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+//firefox用スクロールバー
+.fox_scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.3);
+}
+
+/*------------------
+店舗チェックボックス
+---------------------*/
+.shop-check {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 570px;
+  @include center;
+  transform: translateX(-6px);
+
+  &_txt {
+    @include txt(#fff, 20px, 1, 0.001em);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 0 0 30px;
+    position: relative;
+    width: auto;
+    font-size: 21px;
+
+    &::before {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      content: "";
+      display: block;
+      height: 22px;
+      left: 5px;
+      margin-top: -11px;
+      position: absolute;
+      top: 50%;
+      width: 22px;
+    }
+
+    &::after {
+      border-right: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      content: "";
+      display: block;
+      height: 20px;
+      left: 11px;
+      margin-top: -13px;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 9px;
+    }
+  }
+
+  &_box {
+    visibility: hidden;
+    width: 0;
+  }
+
+  input[type="checkbox"]:checked + .shop-check_txt::before {
+    border: none;
+    background: $orange;
+  }
+
+  input[type="checkbox"]:checked + .shop-check_txt::after {
+    opacity: 1;
+  }
+}
+
+/*------------------
+絞り込みラジオボタン
+---------------------*/
+.sort_radio {
+  margin-top: 0;
+  padding: 0 10px;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+
+  p,
+  div {
+    @include txt(#fff, 24px, 1, 0.001em);
+  }
+
+  p {
+    border-right: 2px solid #fff;
+    margin-right: 24px;
+    width: 125px;
+    font-size: 20px;
+  }
+
+  .radio {
+    width: 947px;
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+
+    div {
+      margin-right: 0;
+      font-size: 24px;
+    }
+
+    div:last-child {
+      margin-right: 0;
+
+      label {
+        padding-right: 0;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .radio02 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+    font-size: 20px;
+  }
+
+  .radio02::before {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 25px;
+    left: 0px;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+  }
+
+  .radio02::after {
+    background: #ff9100;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 17px;
+    left: 4px;
+    margin-top: 0;
+    opacity: 0;
+    position: absolute;
+    top: 7px;
+    width: 17px;
+  }
+
+  input[type="radio"]:checked + .radio02::before {
+    border-color: #666;
+  }
+
+  input[type="radio"]:checked + .radio02::after {
+    opacity: 1;
+  }
+}
+
+/*------------------
+女の子五列
+---------------------*/
+.girl_wrap_5col {
+  width: 1160px;
+  @include center;
+
+  .wrap {
+    margin-bottom: 8px;
+    justify-content: flex-start;
+    flex-flow: wrap;
+  }
+
+  .girl_icon_list {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // bottom: 140px;
+    top: 318px;
+    justify-content: flex-start;
+    width: 82%;
+    flex-flow: wrap;
+
+    li {
+      margin-right: 5px;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .realtime_top {
+    // top: 337px;
+  }
+
+  //グループトップ用
+  .girl_icon_list_group {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 186px;
+    justify-content: flex-start;
+    width: 82%;
+    flex-flow: wrap;
+
+    li {
+      margin-right: 5px;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .col {
+    border: solid 2px #fff;
+    border-image: url(../img/common/bd.png) 1 stretch;
+    padding: 12px 12px;
+    width: 222px;
+    background: url("../img/common/bg_col_girls.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 5px 10px;
+
+    .inner {
+      width: 100%;
+      @include center;
+    }
+
+    .shop {
+      background: $orange;
+      color: #fff;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+      padding: 2px 0;
+    }
+
+    .time {
+      @include txt(#501e0e, 22px, 1, 0.001em);
+      text-align: center;
+      background: rgb(255, 161, 0);
+      background: linear-gradient(0deg, rgba(255, 161, 0, 1) 0%, rgba(255, 182, 57, 1) 45%, rgba(210, 137, 0, 1) 49%, rgba(255, 173, 0, 1) 100%);
+      padding: 6px 0;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .time2 {
+      @include txt(#fff, 18px, 1, 0.001em);
+      text-align: center;
+      margin-top: -5px;
+      margin-bottom: 5px;
+    }
+
+    .pic {
+      img {
+        height: 273px;
+      }
+    }
+
+    .name {
+      @include txt(#fff, 20px, 1, 0.001em);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .size {
+      @include txt(#fff, 16px, 1, 0em);
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .tug {
+      flex-flow: wrap;
+      margin-top: 10px;
+      min-height: 49px;
+      align-items: flex-start;
+
+      li {
+        width: 94px;
+        color: $pink;
+        background: #fff;
+        text-align: center;
+        @include txt($pink, 12px, 1, 0em);
+        margin-bottom: 5px;
+        padding: 5px;
+      }
+
+      li:nth-child(3),
+      li:nth-child(4) {
+        margin-bottom: 0;
+      }
+    }
+
+    .special {
+      margin-top: 6px;
+    }
+  }
+
+  .flexdom {
+    width: 222px;
+  }
+}
+
+.girl_wrap_5col .col .name {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-align: center;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*------------------
+出勤ステータス
+---------------------*/
+.status {
+  background: $pink;
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+
+  span:nth-child(1) {
+    text-align: center;
+    color: #fff;
+  }
+
+  span:nth-child(2) {
+    color: $pink;
+    background: #fff;
+    width: 94%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  + p {
+    @include txt(#000, 20px, 1, 0.001em);
+    margin-top: 8px;
+  }
+}
+
+.status_01 {
+  text-align: center;
+  display: block;
+}
+
+.status_02 {
+  display: block;
+  text-align: center;
+  height: 52px;
+
+  span:nth-child(1) {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+
+  span:nth-child(2) {
+    font-size: 14px;
+    letter-spacing: 0;
+    width: 96%;
+  }
+
+  span br {
+    display: none;
+  }
+}
+
+.girl_wrap_5col {
+  .status {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .status_01 {
+    padding: 5px;
+
+    span {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: $pink;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+}
+
+.rank {
+  .status {
+    width: 260px;
+  }
+}
+
+.story {
+  .status {
+    width: 250px;
+  }
+}
+
+.page_prof {
+  .btn1 {
+    .status_01 {
+      width: 59%;
+      padding: 5px;
+      min-height: 48px;
+
+      span {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        color: #ff4cc0;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+    }
+
+    .status_02 {
+      width: 59%;
+      min-height: 48px;
+    }
+  }
+}
+
+/*------------------
+特別指名料
+---------------------*/
+.special {
+  background: url("../img/common/bg_special.png");
+  padding: 8px;
+
+  p:nth-child(1) {
+    @include txt($pink, 16px, 1, 0.001em);
+  }
+
+  p:nth-child(2) {
+    @include txt(#fff, 16px, 1, 0.001em);
+  }
+}
+
+.txtbox input {
+  background: #fff;
+  color: #000;
+}
+
+/*------------------
+検索セレクトボックス
+---------------------*/
+.select_wrap {
+  select {
+    background: #fff;
+    color: #000;
+    padding-left: 5px;
+    width: 40px;
+  }
+}
+
+/*------------------
+タグ
+---------------------*/
+.tug {
+  flex-flow: wrap;
+  margin-top: 5px;
+
+  li {
+    width: 117px;
+    color: $pink;
+    background: #fff;
+    text-align: center;
+    @include txt($pink, 13px, 1, 0.001em);
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+}
+
+/*------------------
+タブ切り替え
+---------------------*/
+.tab {
+  justify-content: start;
+
+  li,
+  h2 {
+    width: 200px;
+    background: #646464;
+    border-bottom: 3px solid #000;
+    text-align: center;
+    padding: 4px;
+    margin-right: 2px;
+    cursor: pointer;
+    // transition: all 0.2s;
+  }
+
+  li:hover,
+  h2:hover {
+    background: #000;
+  }
+
+  li.active,
+  h2.active {
+    background: #000;
+    border-bottom: 3px solid $pink;
+  }
+}
+
+.tabitem2,
+.tabitem3 {
+  display: none;
+}
+
+/*------------------
+トップページ新人情報店舗リスト
+---------------------*/
+.shop-list-newface {
+  margin-top: 10px;
+  padding: 0px;
+  flex-flow: wrap;
+
+  &__col {
+    a {
+      @include txt(#646464, 24px, 1, 0.001em);
+      display: block;
+      text-align: center;
+      padding-bottom: 10px;
+      position: relative;
+      transition: color 0.2s 0.15s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        border-bottom: 1px solid #ff9100;
+        width: 100%;
+        transition: 0.2s 0.15s ease;
+        transform: scaleX(0);
+      }
+    }
+
+    a.active {
+      color: $orange;
+      border-bottom: 1px solid #ff9100;
+      transition: none;
+      transform: none;
+    }
+
+    a.active:hover {
+      color: $orange;
+      border-bottom: 1px solid #ff9100;
+      transition: none;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    a:hover {
+      color: $orange;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.flex-newface {
+  width: 555px;
+  margin: 0 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*------------------
+店舗リスト
+---------------------*/
+.shop-list {
+  margin-top: 40px;
+  padding: 0 80px;
+  flex-flow: wrap;
+
+  &--four {
+    padding: 0 120px;
+  }
+
+  &__col {
+    a {
+      @include txt(#646464, 24px, 1, 0.001em);
+      display: block;
+      text-align: center;
+      padding-bottom: 10px;
+      position: relative;
+      transition: color 0.2s 0.15s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        border-bottom: 1px solid #ff9100;
+        width: 100%;
+        transition: 0.2s 0.15s ease;
+        transform: scaleX(0);
+      }
+    }
+
+    a.active {
+      color: $orange;
+      border-bottom: 1px solid #ff9100;
+      transition: none;
+      transform: none;
+    }
+
+    a.active:hover {
+      color: $orange;
+      border-bottom: 1px solid #ff9100;
+      transition: none;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    a:hover {
+      color: $orange;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+/*------------------
+見出し
+---------------------*/
+.block_ttl {
+  background-color: #fff;
+  background-image: url(../img/common/ttl_bg_01.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid $orange;
+  @include txt(#000, 24px, 1, 0em);
+  padding: 7px 0 7px 10px;
+  font-weight: normal;
+}
+
+/*------------------
+下層ページ枠組み
+---------------------*/
+.page_wrap {
+  border: solid 2px #fff;
+  border-image: url(../img/common/bd.png) 1 stretch;
+  padding-bottom: 20px;
+}
+
+.page {
+  margin-top: 20px;
+}
+
+/*------------------
+下層ページタイトル
+---------------------*/
+.page_ttl {
+  width: 1200px;
+  height: 50px;
+  background: url("../img/common/ttl_bg_02.png") no-repeat;
+  background-size: contain;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: solid 2px #fff;
+  border-image: url(../img/common/bd.png) 1 stretch;
+
+  h2 {
+    @include txt(#fff, 20px, 1, 0em);
+    padding-left: 157px;
+  }
+
+  span {
+    position: absolute;
+    @include txt(#fff, 20px, 1, 0em);
+    right: 24px;
+    font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  }
+}
+
+/*------------------
+もっと見るボタン・ページャー
+---------------------*/
+.girl_more {
+  a {
+    width: 1139px;
+    background: $pink;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    @include center;
+    margin-bottom: 20px;
+    transition: 0.4s;
+
+    &:hover {
+      color: $pink;
+      background: #fff;
+    }
+  }
+}
+
+.review-page-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.review-page-nav li {
+  margin-right: 8px;
+}
+
+.review-page-nav li.active a {
+  background: $pink;
+  color: #fff;
+}
+
+.review-page-nav li:last-child {
+  margin-right: 0;
+}
+
+.review-page-nav a {
+  display: block;
+  border: 1px solid $pink;
+  color: $pink;
+  background-color: #000;
+  padding: 7px 14px 5px 14px;
+  font-weight: bold;
+}
+
+.review-page-nav a:hover {
+  background: $pink;
+  color: #fff;
+}
+
+/*------------------
+もっと見るボタンハーフサイズ
+---------------------*/
+.top_more_btn_sub {
+  a {
+    display: block;
+    background: $orange;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+  }
+
+  a:hover {
+    background: #fff;
+    border: 1px solid $orange;
+    color: $orange;
+    font-weight: bold;
+  }
+}
+
+/*------------------
+パンくず
+---------------------*/
+.bread {
+  justify-content: start;
+  margin-bottom: 10px;
+
+  li {
+    color: #fff;
+  }
+
+  a {
+    color: $orange;
+    margin-right: 10px;
+  }
+
+  span {
+    padding-right: 10px;
+  }
+}
+
+///////////////////////////////
+//汎用共通パーツここまで
+///////////////////////////////
+
+///////////////////////////////
+//トップ＋下層ページ共通
+///////////////////////////////
+
+/*------------------
+新人情報
+---------------------*/
+.nf {
+  .blk01 {
+    margin-right: 10px;
+    width: 240px;
+  }
+
+  .nf_col {
+    margin-bottom: 10px;
+    width: 570px;
+    margin-right: auto;
+    background-image: url("../img/common/bg_newface.png");
+    background-size: contain;
+    background-color: #fff;
+    background-position: bottom;
+    border: solid 3px #fff;
+    border-image: url(../img/common/bd.png) 1 stretch;
+    background-repeat: no-repeat;
+    padding: 10px;
+    position: relative;
+
+    .date {
+      background: $pink;
+      display: inline-block;
+      padding: 6px 6px 5px;
+      line-height: 1;
+    }
+  }
+
+  .blk02 {
+    width: 280px;
+
+    ul {
+      align-items: center;
+
+      li:nth-child(1) {
+        @include txt(#fff, 14px, 1, 0.001em);
+        background: $pink;
+        display: inline-block;
+        padding: 3px;
+      }
+
+      li:nth-child(2) {
+        @include txt(#000, 15px, 1, 0.001em);
+        margin-top: 5px;
+      }
+    }
+
+    dl {
+      border-bottom: 1px dashed #000;
+      border-top: 1px dashed #000;
+      align-items: baseline;
+      flex-flow: column;
+      margin-top: 10px;
+      padding: 4px 0px 6px 0;
+
+      dt {
+        @include txt(#000, 18px, 1, 0.001em);
+        font-weight: normal;
+        margin-bottom: 3px;
+        margin-top: 3px;
+      }
+
+      dd {
+        @include txt(#000, 16px, 1, 0.001em);
+      }
+    }
+
+    .cut_nf_txt {
+      color: #000;
+      font-size: 12px;
+      line-height: 1.8;
+      letter-spacing: 0.001em;
+      margin-top: 10px;
+      position: relative;
+      max-height: 5em;
+      overflow: hidden;
+      text-align: justify;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+
+      img {
+        display: none;
+      }
+
+      * {
+        color: #000 !important;
+        font-size: 12px !important;
+        line-height: 1.8 !important;
+        letter-spacing: 0.001em !important;
+        font-weight: normal !important;
+      }
+
+      //途中で文字隠し
+      /* &::after {
+        content: "...";
+        line-height: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        color: #000;
+        padding-top: 5px;
+        width: 1em;
+      } */
+    }
+
+    .more {
+      text-align: right;
+
+      a {
+        color: $pink;
+        margin-left: auto;
+        font-size: 14px;
+        margin-top: 10px;
+        display: block;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .status_wrap {
+      position: absolute;
+      right: 10px;
+      bottom: 13px;
+      width: 190px;
+    }
+
+    .girl_shop {
+      background: #ff9100;
+      border-radius: 3px;
+      @include txt(#fff, 22px, 1, 0.001em);
+      padding: 6px 5px;
+      margin-top: 5px;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+}
+
+.nf_2col {
+  padding: 24px;
+  width: auto;
+  border: solid 2px #fff;
+  border-image: url(../img/common/bd.png) 1 stretch;
+  margin-top: 0;
+}
+
+.outer {
+  flex-flow: wrap;
+}
+
+/*------------------
+ストーリー
+---------------------*/
+.story {
+  width: 495px;
+
+  .story_wrap {
+    background: #fff;
+    border: 1px solid $orange;
+    border-top: none;
+    height: 2135px;
+    overflow-y: scroll;
+  }
+
+  .pic_story {
+    margin-right: 17px;
+
+    img {
+      width: 76px;
+      height: 76px;
+      object-fit: cover;
+      border-radius: 50%;
+      object-position: 0px 0px;
+    }
+  }
+
+  .story_col {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-bottom: solid 1px #fff;
+    border-image: url("../img/common/bd.png") 1 stretch;
+  }
+
+  .date {
+    color: $pink;
+    text-align: right;
+  }
+
+  .content {
+    color: #000;
+
+    img,
+    video {
+      margin: 10px 0;
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  .pic_story {
+    border: 2px solid $pink;
+    border-radius: 100px;
+
+    img {
+      width: 74px;
+      height: 74px;
+      object-fit: cover;
+      border-radius: 50%;
+      object-position: 0px 0px;
+      border: 3px solid #fff;
+    }
+  }
+
+  .icon_col {
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
+
+/*------------------
+リアルタイム
+---------------------*/
+.rt {
+  margin-top: 40px;
+
+  .rt_wrap {
+    width: 1160px;
+    @include center;
+  }
+
+  .shop-list {
+    margin-bottom: 20px;
+  }
+
+  .top_more_btn {
+    a {
+      margin-top: 50px;
+      margin-bottom: 57px;
+      text-align: center;
+      background: #fff;
+      @include txt(#000, 18px, 1, 0.001em);
+      @include center;
+      width: 600px;
+      height: 39px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $orange;
+    }
+
+    a:hover {
+      background: $orange;
+      color: #fff;
+    }
+  }
+}
+
+/*------------------
+ランキング
+---------------------*/
+.rank {
+  margin-top: 40px;
+
+  .rank_tab {
+    ul {
+      width: 1151px;
+      @include center;
+
+      li {
+        border: 1px solid #fff;
+        color: #666666;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        margin: 20px 0 30px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      li:hover {
+        background: #fff;
+        color: #000;
+        position: relative;
+      }
+
+      li.active {
+        background: #fff;
+        color: #000;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 89%;
+          left: 50%;
+          margin-left: -13px;
+          border: 13px solid transparent;
+          border-top: 15px solid #fff;
+        }
+      }
+    }
+  }
+
+  .rank_outer {
+    @include bdGrad;
+    padding-bottom: 60px;
+  }
+
+  .rank_col {
+    margin-top: 40px;
+    background-color: #fff;
+    width: 1151px;
+    height: 538px;
+    @include center;
+    padding: 20px;
+    background-image: url("../img/common/bg_ranking.png");
+    background-size: 100%;
+    border: solid 3px #fff;
+    border-image: url(../img/common/bd.png) 1 stretch;
+
+    .blk01 {
+      width: 365px;
+
+      h3 {
+        font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+
+        span:nth-child(1) {
+          @include txt(#ba272d, 25px, 1, 0.001em);
+          display: block;
+        }
+
+        span:nth-child(2) {
+          @include txt(#ba272d, 48px, 1, 0.001em);
+        }
+
+        span:nth-child(3) {
+          @include txt(#ba272d, 72px, 1, 0.001em);
+        }
+
+        span:nth-child(4) {
+          @include txt(#ba272d, 40px, 1, 0.001em);
+        }
+      }
+
+      h3 + ul {
+        margin-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px dotted #000;
+        margin-bottom: 10px;
+
+        li:nth-child(1) {
+          @include txt(#000, 22px, 1, 0.001em);
+        }
+
+        li:nth-child(2) {
+          @include txt(#000, 18px, 1, 0.001em);
+        }
+      }
+
+      .Reserv {
+        @include txt(#000, 15px, 1, 0.001em);
+        width: 239px;
+        height: 42px;
+        // display: flex;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background: url("../img/common/bg_reserve.png") no-repeat;
+        background-size: 100%;
+
+        a {
+          width: 239px;
+          height: 42px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      h4 {
+        @include txt(#000, 12px, 1, 0.001em);
+        margin-top: 20px;
+        background: #fff;
+        border: 1px solid #000;
+        padding: 6px;
+        border-radius: 5px;
+        width: 94px;
+        text-align: center;
+        position: relative;
+        top: 5px;
+        z-index: 0;
+        margin-left: 10px;
+      }
+
+      .sc_wrap {
+        width: 260px;
+        position: relative;
+        z-index: 1;
+
+        li {
+          display: flex;
+          align-items: center;
+          @include txt(#fff, 14px, 1, 0.001em);
+          height: 25px;
+
+          div:nth-child(1) {
+            width: 112px;
+            text-align: right;
+          }
+
+          div:nth-child(2) {
+            width: 145px;
+            text-align: center;
+          }
+        }
+
+        li:nth-child(odd) {
+          background: #373737;
+        }
+
+        li:nth-child(even) {
+          background: #191919;
+          height: 25px;
+        }
+      }
+
+      .prof {
+        @include txt(#000, 15px, 1, 0.001em);
+        width: 260px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../img/common/bg_prof.png") no-repeat;
+        background-size: 100%;
+        margin-top: 10px;
+
+        a {
+          width: 260px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .blk02 {
+      width: 351px;
+
+      .pic {
+        position: relative;
+      }
+    }
+
+    .blk03 {
+      width: 365px;
+      background: #000;
+      height: 494px;
+      overflow-y: scroll;
+      padding: 15px;
+
+      .subpic {
+        flex-flow: wrap;
+
+        div {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .girl_icon_list {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+
+    li {
+      margin-right: 5px;
+    }
+  }
+
+  .rank_list {
+    width: 1098px;
+    @include center;
+    margin-top: 40px;
+    // リロード時に大きいサイズで表示されるのを防止
+    opacity: 0;
+
+    h3 {
+      @include txt(#ffc600, 44px, 1, 0.001em);
+      font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+
+      span {
+        @include txt(#ffc600, 24px, 1, 0.001em);
+      }
+    }
+
+    h3 + p {
+      color: #fff;
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: 0.001em;
+      width: 130px;
+      transform: translateY(-4px);
+    }
+
+    div.flex {
+      align-items: flex-end;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      flex-flow: wrap;
+      font-size: 10px;
+    }
+
+    .pic {
+      cursor: pointer;
+      transition: 0.2s;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .pic:hover {
+      opacity: 0.7;
+    }
+
+    .size {
+      @include txt(#fff, 16px, 1, 0.001em);
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .rank_wrap {
+    position: relative;
+  }
+
+  .tabitem1,
+  .tabitem2,
+  .tabitem3 {
+    position: relative;
+  }
+
+  .tabitem2,
+  .tabitem3 {
+    display: block;
+    position: absolute;
+    top: -99999px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 26px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+    background: $orange;
+    padding: 12px;
+    color: #fff;
+  }
+
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    left: 35px;
+    right: auto;
+    bottom: 155px;
+    top: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 35px;
+    left: auto;
+    bottom: 155px;
+    top: auto;
+  }
+
+  .swiper-button-prev {
+    opacity: 0;
+  }
+
+  .swiper-button-next {
+    opacity: 0;
+  }
+}
+
+/*------------------
+ヘッダー
+---------------------*/
+.m_fixed {
+  top: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 1200px;
+}
+
+.shop {
+  .m_fixed {
+    padding-top: 40px;
+    background: #000;
+  }
+}
+
+.h_tel {
+  display: none;
+}
+
+.tel_fixed {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 1200px;
+  z-index: 99999;
+  text-align: right;
+  transform: translateY(8px);
+  font-size: 18px;
+  font-weight: bold;
+  color: $orange;
+}
+
+header {
+  //padding-top: 40px;
+
+  .nav1 {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+
+    nav {
+      ul {
+        width: 822px;
+        justify-content: flex-end;
+      }
+
+      li a {
+        @include txt(#fff, 15px, 1, 0em);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 166px;
+        height: 46px;
+        padding: 6px;
+        text-align: center;
+        background: #000000;
+        border: 1px solid #ff9641;
+        transition: all 0.5s;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+      li a::after {
+        background: url(../img/common/nav_bg_02_hover.png) no-repeat;
+        height: 80px; // ボタンの高さによって調整
+        position: absolute;
+        top: -3px;
+        left: -2px;
+        content: '';
+        width: 110%;
+        background-size: contain;
+        transform: scale(0, 1);
+
+        z-index: -1;
+      }
+      li a:hover::after {
+        transform: scale(1, 1);
+        color: #201c19;
+        font-size: medium;
+      }
+      .active{
+        background: url(../img/common/nav_bg_02_hover.png) no-repeat;
+        color: #ff8941;
+      }
+      li a:hover {
+        color: #ff8941;
+        font-size: medium;
+        padding: 6px 0 4px;
+
+      }
+    }
+  }
+
+  .nav2 {
+    ul {
+      justify-content: space-between;
+      flex-flow: wrap;
+      border: 1px solid #ff9641;
+      li {
+        width: 149px;
+      }
+
+      li a {
+        @include txt(#fff, 16px, 1, 0em);
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+        background: #000000;
+        background-size: cover;
+        border: 1px solid #ff9641;
+        transition: all 0.5s;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+
+      li a::after {
+        background: url(../img/common/nav_bg_02_hover.png) no-repeat;
+        height: 80px; // ボタンの高さによって調整
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        content: '';
+        width: 104%;
+        background-size: contain;
+        transform: scale(0, 1);
+
+        z-index: -1;
+      }
+      li a:hover::after {
+        transform: scale(1, 1);
+        color: #201c19;
+        font-size: large;
+      }
+      .active{
+
+        color: #ff8941;
+        background: url(../img/common/nav_bg_02_hover.png) no-repeat;
+        background-size: cover;
+      }
+      li a:hover {
+        //width: 105%;
+        //height: 50px;
+        color: #ff8941;
+        font-size: large;
+        padding: 6px 0 4px;
+        //  background: url(../img/common/nav_bg_02_hover.png) no-repeat;
+        //background-size:cover ;
+      }
+    }
+  }
+
+  .mypage-login{
+    position: unset;
+    text-align: right;
+    padding-bottom: 20px;
+    img{
+      width:7em;
+    }
+  }
+}
+.mypage-login{
+  position: absolute;
+  right: 47px;
+  img{
+    width:7em;
+  }
+}
+.loginbar{
+  position: fixed;
+  width: 1090px;
+  top: 0px;
+  transform: none;
+  text-align: unset;
+ }
+
+.group {
+  .nav2 {
+    li {
+      width: 199px;
+
+      a {
+        width: 101%;
+      }
+    }
+  }
+}
+
+/*------------------
+フッター
+---------------------*/
+footer {
+  margin-top: 90px;
+  background: #000;
+
+  .bd_outer {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .bd_wrap {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  nav {
+    width: 930px;
+    @include center;
+
+    li {
+      a {
+        @include txt(#fff, 15px, 1, 0.001em);
+      }
+    }
+  }
+
+  .f_nav_01 {
+    li {
+      padding-left: 10px;
+      border-left: 1px solid #fff;
+      width: 155px;
+      text-align: left;
+    }
+
+    li:first-child {
+      text-align: left;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+    /* &::after {
+      content: "";
+      display: block;
+      width: 155px;
+      text-align: center;
+    } */
+  }
+
+  .f_nav_02 {
+    margin-top: 10px;
+
+    justify-content: flex-start;
+
+    li {
+      padding-left: 10px;
+      border-left: 1px solid #fff;
+      width: 155px;
+      text-align: left;
+    }
+
+    li:first-child {
+      text-align: left;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+  }
+
+  .f_txt_01 {
+    width: 426px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include txt(#000, 16px, 1, 0.001em);
+    margin-top: 30px;
+    background: #fff;
+    @include center;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .f_txt_02 {
+    margin-top: 30px;
+    @include txt(#fff, 13px, 1, 0.001em);
+    text-align: center;
+
+    a {
+      color: $orange;
+      transition: all 0.2s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .f_txt_03 {
+    @include txt(#fff, 13px, 1.8, 0.001em);
+    margin-left: 60px;
+    margin-top: 70px;
+  }
+
+  .copy {
+    text-align: center;
+    margin-top: 20px;
+    @include txt(#fff, 13px, 1, 0.001em);
+  }
+}
+
+//ラジオボタン切り替え
+.all-show {
+  display: block;
+}
+
+.new {
+  display: block;
+}
+
+.new2 {
+  display: block;
+}
+
+////////////////エグゼ追加分
+ul.paging::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul.paging > li {
+  float: left;
+}
+
+ul.paging > li > * {
+  margin: 2px;
+  padding: 3px 0;
+  display: block;
+  /*color: #000;*/
+  text-decoration: none;
+}
+
+ul.paging > li > a,
+ul.paging > li > .active,
+ul.paging > li > [data-page] {
+  padding: 7px 14px 5px 14px;
+  border: 1px solid #ff4cc0;
+  /*border-radius: 5px;*/
+}
+
+ul.paging > li > .active {
+  background-color: #ff4cc0;
+}
+
+ul.paging > li > [data-page] {
+  cursor: pointer;
+}
+
+//---------------footerアコーディオン部分
+footer{
+  .menu > li.menu__single {
+    position: relative;
+  }
+
+  li.menu__single ul.menu__second-level {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    background: transparent;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+
+  li.menu__single:hover ul.menu__second-level {
+    top: 24px;
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu {
+    position: relative;
+    width: 100%;
+    height: 24px;
+    padding-bottom: 230px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .menu > li {
+    float: left;
+    width: 20%;
+    height: 24px;
+    line-height: 24px;
+    background: transparent;
+    text-align: center;
+    border-right: 1px solid #c1c1c1;
+    &:first-of-type{
+      border-left: 1px solid #c1c1c1;
+    }
+  }
+
+  .menu > li a {
+    display: block;
+    color: #FFFFFF;
+    line-height: 24px;
+  }
+
+  .menu > li a:hover {
+    color:#ff9100;
+  }
+
+  ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+
+  }
+
+  ul.menu__third-level {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  ul.menu__fourth-level {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .menu > li:hover {
+    background: transparent;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+
+  .menu__second-level li {
+    font-weight: 400;
+    margin: 8px auto 8px auto;
+    &:first-of-type{
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .menu__third-level li {
+
+  }
+
+  .menu__second-level li a:hover {
+    background: transparent;
+  }
+
+  .menu__third-level li a:hover {
+    background: transparent;
+  }
+
+  .menu__fourth-level li a:hover {
+    background: transparent;
+  }
+
+  /* 下矢印 */
+  .init-bottom:after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 0 3px 9px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid  #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* floatクリア */
+  .menu:before,
+  .menu:after {
+    content: " ";
+    display: table;
+  }
+
+  .menu:after {
+    clear: both;
+  }
+
+  .menu {
+    *zoom: 1;
+  }
+}

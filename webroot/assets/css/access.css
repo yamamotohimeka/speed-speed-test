@@ -1,0 +1,61 @@
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url("../img/common/arrow-next.png") no-repeat;
+}
+
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url("../img/common/arrow-back.png") no-repeat;
+}
+
+.access_wrap {
+  border: solid 2px transparent;
+  -o-border-image: url(../img/common/bd.png) 1 stretch;
+     border-image: url(../img/common/bd.png) 1 stretch;
+  padding-top: 40px;
+}
+.access_wrap .shop-list {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.access_wrap .shop_ttl {
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #ff9100;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.access_col {
+  width: 900px;
+  margin: auto;
+}
+.access_col .map_txt {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.access_col .map {
+  margin-bottom: 20px;
+}
+.access_col h3 {
+  background: #ff4cc0;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  padding: 2px 0;
+  margin-bottom: 5px;
+}
+.access_col .blk01 > .movie {
+  margin-bottom: 60px;
+}
+.access_col .blk02 {
+  width: 270px;
+}
+
+#umeda,
+#nippon,
+#nanba,
+#kyobashi {
+  margin-top: -80px;
+  padding-top: 80px;
+}/*# sourceMappingURL=access.css.map */

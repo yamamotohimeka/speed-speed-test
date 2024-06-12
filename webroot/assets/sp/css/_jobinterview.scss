@@ -1,0 +1,38 @@
+.jobinterview {
+  @include pc {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &-inner {
+    margin-left: 16rem;
+    margin-right: 16rem;
+    margin-bottom: 64rem;
+    padding: 1px;
+    background-color: $c_pink;
+  }
+
+  &-info {
+    padding: 24rem;
+    background-color: #000;
+    margin-bottom: 1px;
+  }
+
+  &-title {
+    margin-bottom: 16rem;
+    font-size: 36rem;
+    @include pc {
+      font-size: 14rem;
+    }
+  }
+
+  &-text {
+    font-size: 28rem;
+    line-height: 1.6;
+    text-align: justify;
+    @include pc {
+      font-size: 12rem;
+    }
+  }
+}

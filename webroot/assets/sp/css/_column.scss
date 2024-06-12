@@ -1,0 +1,55 @@
+.column {
+  margin-top: 20rem;
+  margin-right: 20rem;
+  margin-left: 20rem;
+  margin-bottom: 64rem;
+  font-size: 14px;
+  @include pc {
+    font-size: 10rem;
+    line-height: 2;
+  }
+}
+
+.column ul {
+  margin-top: 3%;
+}
+
+.column ul li {
+  border-bottom: 1px #999 solid;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.column ul li a {
+  color: #FFFFFF;
+  position: relative;
+}
+
+// .column ul li a:before {
+//   content: "";
+//   display: inline-block;
+//   border: 7px solid transparent;
+//   border-left-color: #FFF;
+//   position: absolute;
+//   left: 2%;
+//   top: 32%;
+//   margin-top: -7px;
+// }
+
+.column ul li a date {
+  color: #FF238E;
+  font-size: 14px;
+}
+
+.column ul li img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.events .section-title {
+  //line-height: 1.4;
+  //padding-top: 16rem;
+  //padding-bottom: 16rem;
+  //font-size: 36rem;
+
+}

@@ -1,0 +1,306 @@
+@import "mixin";
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:hover {
+    color: #888;
+  }
+}
+html {scroll-behavior: smooth;
+overscroll-behavior: auto;}
+li {
+  list-style-type: none;
+}
+.main-top{
+  padding-top: 44px;
+  @media screen and (max-width: 1600px) {
+    margin-top: 44px;
+  }
+  @include pc {
+    margin-top:calc(1vw / (1200 / 100));
+  }
+  @include tab {
+    margin-top: 0;
+    padding-top:calc(252vw / (768 / 100));
+  }
+}
+
+#chamo-window .chamo-chatlog-wrapper {
+  overscroll-behavior: auto;
+}
+main{
+  .container {
+    max-width: 1040px;
+    @include center;
+  }
+  @include tab {
+    
+  }
+}
+.section-title{
+  margin-top: 70px;
+  margin-bottom: 20px;
+  font-size: 46px;
+  font-family: "kozka";
+  letter-spacing: 0.05em;
+  text-shadow:2px 2px 0 #000, -2px -2px 0 #000,
+  -2px 2px 0 #000, 2px -2px 0 #000,
+  0px 2px 0 #000,  0 -2px 0 #000,
+  -2px 0 0 #000, 2px 0 0 #000;
+  @include pc {
+    margin-top:calc(70vw / (1040 / 100));
+    margin-bottom:calc(20vw / (1040 / 100));
+    font-size:calc(46vw / (1040 / 100));
+    text-shadow:1px 1px 0 #000, -1px -1px 0 #000,
+    -1px 1px 0 #000, 1px -1px 0 #000,
+    0px 1px 0 #000,  0 -1px 0 #000,
+    -1px 0 0 #000, 1px 0 0 #000;
+  }
+  @include tab {
+    margin-top:calc(70vw / (768 / 100));
+    margin-bottom:calc(30vw / (768 / 100));
+    font-size:calc(38vw / (768 / 100));
+  }
+}
+.fixed {
+	position: fixed;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 0px;
+  background-color: $blue;
+	top: 0;
+  z-index: 999;
+  @include pc {
+    max-width:calc(1200vw / (1200 / 100));
+  }
+}
+body {
+  background: #000;
+  font-variant-ligatures: none;
+  font-family: "ヒラギノ明朝 ProN","Hiragino Mincho ProN";
+  font-weight: 200;
+  overflow-x: hidden;
+  color: $yellow;
+  font-weight: 500;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+
+.block {
+  display: block !important;
+}
+
+.none {
+  display: none !important;
+}
+
+.pc {
+  display: block !important;
+  @include tab {
+    display: none !important;
+  }
+}
+
+.tab {
+  display: none !important;
+  @include tab {
+    display: block !important;
+  }
+}
+.pc-words {
+  @include sp {
+    display: none !important;
+  }
+}
+.sp-words {
+  display: none !important;
+  @include sp {
+    display: block !important;
+  }
+}
+.recruit {
+  @include tab {
+    padding-top: calc(136vw / (768 / 100));
+  }
+}
+
+.container {
+  
+  max-width: 1200px;
+  @include center;
+}
+
+.flex {
+  @include flex;
+}
+
+.flex-low {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-around {
+  @include flex-around;
+}
+
+/* ボタンで表示・非表示JSで値操作 */
+[data-display="hide"] {
+  display: none;
+}
+
+[data-display="show"] {
+  display: block;
+}
+
+.fadeUp {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.fadeUp.show-fadeUp {
+  animation: fadeUp 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn1 {
+  opacity: 0;
+}
+
+.fadeIn1.show-fadeIn1 {
+  animation: fadeIn 1.1s ease-in-out forwards;
+}
+
+.fadeIn2 {
+  opacity: 0;
+}
+
+.fadeIn2.show-fadeIn2 {
+  animation: fadeIn 1.1s 0.6s ease-in-out forwards;
+}
+
+.fadeIn3 {
+  opacity: 0;
+}
+
+.fadeIn3.show-fadeIn3 {
+  animation: fadeIn 1.1s 1.1s ease-in-out forwards;
+}
+
+.fadeIn4 {
+  opacity: 0;
+}
+
+.fadeIn4.show-fadeIn4 {
+  animation: fadeIn 1.1s 1.7s ease-in-out forwards;
+}
+
+.fadeIn5 {
+  opacity: 0;
+}
+
+.fadeIn5.show-fadeIn5 {
+  animation: fadeIn  0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bound1 {
+  opacity: 0;
+}
+
+.bound1.show-bound1 {
+  animation: bound 2s 0.6s linear forwards;
+}
+
+.bound2 {
+  opacity: 0;
+}
+
+.bound2.show-bound2 {
+  animation: bound 2s 1s linear forwards;
+}
+
+.bound3 {
+  opacity: 0;
+}
+
+.bound3.show-bound3 {
+  animation: bound 2s 1.6s linear forwards;
+}
+
+@keyframes bound {
+  0% {
+    transform: translate(0%, -48%);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(0%, 0%) scale(0.95);
+  }
+  40% {
+    transform: translate(0%, -12%);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(0%, 0%) scale(0.95);
+  }
+  60% {
+    transform: translate(0%, -6%);
+  }
+  70% {
+    transform: translate(0%, 0%) scale(0.95);
+  }
+  75% {
+    transform: translate(0%, -2.4%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+@font-face {
+  font-family: "maru";
+  src: url("../fonts/A-OTF-MaruFoPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "ryumin";
+  src: url("../fonts/A-OTF-RyuminPr6-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "kozka";
+  src: url("../fonts/KozGoPr6N-Medium.otf") format("opentype");
+}
+.section-title{
+  color: $pink;
+}

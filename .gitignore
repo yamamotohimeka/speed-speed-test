@@ -1,0 +1,8 @@
+**/css/style.css
+*.htaccess
+*.htpasswd
+*.css.map
+**/.idea
+/cake/app/View/*
+!/cake/app/View/Front/
+webroot/assets/css/.sass-cache

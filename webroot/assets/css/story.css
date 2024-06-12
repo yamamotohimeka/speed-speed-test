@@ -1,0 +1,48 @@
+.page_story .review-page-nav {
+  margin-top: 20px;
+}
+.page_story .shop-list {
+  margin-bottom: 20px;
+}
+.page_story .story_wrap {
+  height: auto;
+  border: none;
+  overflow-y: auto;
+  width: auto;
+  background: #fff;
+}
+.page_story .icon_col {
+  width: 500px;
+}
+.page_story .story_col {
+  padding-top: 20px;
+  border: solid 3px transparent;
+  -o-border-image: url(../img/common/bd.png) 1 stretch;
+     border-image: url(../img/common/bd.png) 1 stretch;
+}
+.page_story .story_col .content {
+  justify-content: flex-start;
+}
+.page_story .story_col .content .pic {
+  display: inline-block;
+  width: 500px;
+  margin-right: 20px;
+}
+.page_story .story_col .content .pic img,
+.page_story .story_col .content .pic video {
+  margin-top: 0;
+  width: 100%;
+}
+.page_story .story_col .content .pic video {
+  width: 100%;
+}
+.page_story .story_col .content .pic .date {
+  text-align: right;
+  color: #FF4CC0;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0em;
+}
+.page_story .story_col .content .pic + p {
+  max-width: 630px;
+}/*# sourceMappingURL=story.css.map */

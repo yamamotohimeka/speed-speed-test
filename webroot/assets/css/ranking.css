@@ -1,0 +1,11 @@
+.page_rank .rank {
+  margin-top: 0;
+}
+.page_rank .rank_outer {
+  border: solid 2px transparent;
+  -o-border-image: url(../img/common/bd.png) 1 stretch;
+     border-image: url(../img/common/bd.png) 1 stretch;
+}
+.page_rank .rank_col {
+  margin-top: 0;
+}/*# sourceMappingURL=ranking.css.map */

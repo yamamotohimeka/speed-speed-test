@@ -1,0 +1,39 @@
+@import "mixin";
+
+.page_event {
+
+  .shop-list {
+    margin-bottom: 20px;
+  }
+
+  .event_col {
+    text-align: center;
+    padding: 62px 100px;
+    border-bottom: solid 1.5px transparent;
+    border-image: url(../img/common/bd.png) 1 stretch;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .tag_wrap {
+    text-align: left;
+  }
+
+  .shop_tag {
+    display: inline-block;
+    background: $pink;
+    padding: 10px;
+    width: 300px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+  }
+}

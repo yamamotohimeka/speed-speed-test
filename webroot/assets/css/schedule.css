@@ -1,0 +1,39 @@
+.page_schedule .week {
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+.page_schedule .week a {
+  color: #646464;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+.page_schedule .week a:hover {
+  color: #ff9100;
+  border-bottom: 1px solid #ff9100;
+  padding-left: 12px;
+}
+.page_schedule .week .current {
+  color: #ff9100;
+  border-bottom: 1px solid #ff9100;
+  padding-left: 12px;
+}
+.page_schedule .girl_wrap_5col {
+  margin-bottom: 20px;
+}
+.page_schedule .sort_radio {
+  margin-bottom: 20px;
+}
+
+.btn_submit input {
+  background: #ff4cc0;
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.schedule-link {
+  display: block;
+}/*# sourceMappingURL=schedule.css.map */

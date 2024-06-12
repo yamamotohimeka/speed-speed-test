@@ -1,0 +1,90 @@
+@import "mixin";
+
+.page_girls {
+
+  .txtbox {
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    input {
+      width: 100%;
+      margin-right: 10px;
+      height: 31px;
+    }
+  }
+
+  .txtbox_name {
+    width: 150px;
+  }
+
+  .selectbox {
+    select {
+      padding-left: 5px;
+      width: 53px;
+    }
+  }
+
+  .sort_radio {
+    margin-bottom: 20px;
+  }
+
+  .select_wrap,
+  .select_wrap02 {
+    justify-content: center;
+    width: 1139px;
+    border: 1px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    align-items: center;
+
+    .blk01 {
+      li {
+        margin-right: 15px;
+        font-size: 22px;
+
+        div:nth-child(1) {
+          // margin-right: 10px;
+          letter-spacing: -0.02em;
+        }
+      }
+    }
+
+    .blk02 {
+      .btn_submit {
+        input {
+          background: $pink;
+          width: 100px;
+          height: 32px;
+          border-radius: 5px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .select_wrap02 {
+    border: none;
+    margin-bottom: 0;
+    padding: 0 0 12px;
+  }
+
+
+  .girl_wrap_5col {
+    // padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .btn_submit input {
+    background: #ff4cc0;
+    width: 100px;
+    height: 32px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+}

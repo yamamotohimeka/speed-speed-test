@@ -1,0 +1,59 @@
+.pointcard {
+  width: 100%;
+}
+.pointcard__inner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 40px 0 20px;
+  text-align: center;
+  z-index: 100;
+  font-size: 13px;
+}
+.pointcard__inner .close {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+.pointcard__inner .close .clbtn {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.pointcard__inner .close .clbtn span::before {
+  transform: rotate(-45deg);
+  display: block;
+  content: "";
+  position: absolute;
+  top: 53%;
+  left: 8%;
+  width: 84%;
+  height: 6%;
+  background: #a1a1a1;
+}
+.pointcard__inner .close .clbtn span::after {
+  transform: rotate(45deg);
+  display: block;
+  content: "";
+  position: absolute;
+  top: 53%;
+  left: 8%;
+  width: 84%;
+  height: 6%;
+  background: #a1a1a1;
+}
+.pointcard__img {
+  max-width: 550px;
+  margin: 0 auto;
+}
+.pointcard__img img {
+  width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}/*# sourceMappingURL=pointcard.css.map */

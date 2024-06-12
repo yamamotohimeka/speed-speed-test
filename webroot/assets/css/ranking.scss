@@ -1,0 +1,16 @@
+@import "mixin";
+
+.page_rank {
+	.rank {
+		margin-top: 0;
+	}
+
+	.rank_outer {
+		border: solid 2px transparent;
+		border-image: url(../img/common/bd.png) 1 stretch;
+	}
+
+	.rank_col {
+		margin-top: 0;
+	}
+}

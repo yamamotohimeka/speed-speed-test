@@ -1,0 +1,135 @@
+@charset "UTF-8";
+.page_mm {
+  /* 出勤メルマガ */
+  /* 登録確認画面 */
+  /* 登録完了画面 */
+  /* 解除確認画面 */
+}
+.page_mm .mm_col {
+  width: 1010px;
+  margin: 10px auto 20px auto;
+  border: 1px #FF238F solid;
+}
+.page_mm .mm_col h3 {
+  background: #FF238F;
+}
+.page_mm .mm_col span {
+  width: 250px;
+  margin: 2px 0px 2px 2px;
+  padding: 8px 10px 9px 10px;
+  display: inline-block;
+  background: #000;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #FFF;
+}
+.page_mm .mm_col p {
+  margin: 20px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
+.page_mm .mm_col select {
+  width: 200px;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+  height: 22px;
+}
+.page_mm .mm_col .submit {
+  margin: 0px auto 30px;
+  font-size: 110%;
+  text-align: center;
+  color: #fff;
+}
+.page_mm .mm_col .submit input {
+  width: auto;
+  cursor: pointer;
+  background: #ff00a6;
+  padding: 7px 50px;
+  color: #FFF;
+  border: none;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  line-height: 1;
+  font-size: 15px;
+  width: 325px;
+}
+.page_mm #p1 {
+  margin-top: -100px;
+  padding-top: 100px;
+}
+.page_mm .group_shukkin .submit a {
+  display: block;
+  cursor: pointer;
+  background: #ff00a6;
+  padding: 7px 50px;
+  color: #FFF;
+  border: none;
+  border-radius: 8px;
+  line-height: 1;
+  font-size: 15px;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page_mm table {
+  margin: 0px 40px 20px 40px;
+  table-layout: fixed;
+  border-top: 1px #88878b solid;
+  border-left: 1px #88878b solid;
+}
+.page_mm table th,
+.page_mm table td {
+  padding: 10px;
+  border-bottom: 1px #88878b solid;
+  border-right: 1px #88878b solid;
+}
+.page_mm table th {
+  width: 200px;
+  color: #fff;
+}
+.page_mm table td label {
+  display: inline-block;
+  width: 160px;
+  color: #fff;
+}
+.page_mm table td input {
+  margin-right: 3px;
+  background: #fff;
+  color: #000;
+}
+.page_mm .input_mail {
+  width: 400px;
+}
+.page_mm .section_check img,
+.page_mm .section_list img {
+  float: left;
+  display: inline;
+  padding-right: 20px;
+}
+.page_mm .section_check table {
+  margin: 0 auto 20px;
+  width: 800px;
+}
+.page_mm .section_check table th,
+.page_mm .section_check table td {
+  padding: 20px;
+  vertical-align: middle;
+}
+.page_mm .section_check table th {
+  text-align: center;
+}
+.page_mm .section_check table td span {
+  padding-left: 20px;
+}
+.page_mm .section_add p {
+  text-align: center;
+}
+.page_mm .section_list table td span {
+  display: inline-block;
+  padding-top: 15px;
+}/*# sourceMappingURL=mailmagazine.css.map */

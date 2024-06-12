@@ -1,0 +1,57 @@
+.events {
+  @include pc {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    margin-bottom: 20rem;
+  }
+
+  &-inner {
+    margin-top: 20rem;
+    margin-right: 20rem;
+    margin-left: 20rem;
+    margin-bottom: 64rem;
+    padding: 1px;
+    background-color: $c_pink;
+  }
+
+  &-post {
+    &:not(:last-of-type) {
+      margin-bottom: 1px;
+    }
+
+    padding: 24rem;
+    background-color: #000;
+
+  }
+
+  &-banner {
+    display: block;
+    margin-bottom: 16rem;
+  }
+
+  &-shop {
+    background-color: $c_pink;
+    font-size: 24rem;
+    padding: 0 8rem;
+    width: 112rem;
+    text-align: center;
+    line-height: 40rem;
+    border-radius: 6rem 6rem 0 0;
+    @include pc {
+      font-size: 10rem;
+      line-height: 20rem;
+    }
+  }
+
+  &-text {
+    font-size: 28rem;
+    @include pc {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}

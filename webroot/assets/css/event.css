@@ -1,0 +1,30 @@
+.page_event .shop-list {
+  margin-bottom: 20px;
+}
+.page_event .event_col {
+  text-align: center;
+  padding: 62px 100px;
+  border-bottom: solid 1.5px transparent;
+  -o-border-image: url(../img/common/bd.png) 1 stretch;
+     border-image: url(../img/common/bd.png) 1 stretch;
+}
+.page_event .event_col img {
+  max-width: 100%;
+}
+.page_event .event_col:last-child {
+  border-bottom: none;
+}
+.page_event .tag_wrap {
+  text-align: left;
+}
+.page_event .shop_tag {
+  display: inline-block;
+  background: #ff4cc0;
+  padding: 10px;
+  width: 300px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}/*# sourceMappingURL=event.css.map */

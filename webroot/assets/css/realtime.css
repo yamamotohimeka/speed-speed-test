@@ -1,0 +1,33 @@
+.page_realtime .rt {
+  margin-top: 0;
+}
+.page_realtime .rt_time_ttl {
+  width: 1139px;
+  height: 43px;
+  color: #ff4cc0;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0em;
+  background: #E6E6E6;
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  padding-left: 22px;
+  border-left: 11px solid #ff4cc0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page_realtime .sort_radio {
+  margin-bottom: 20px;
+}
+
+.btn_submit input {
+  background: #ff4cc0;
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}/*# sourceMappingURL=realtime.css.map */

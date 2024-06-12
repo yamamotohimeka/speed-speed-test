@@ -1,0 +1,133 @@
+.enquetes {
+  @include pc {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    margin-bottom: 20rem;
+  }
+
+  &-wrapper {
+    margin-right: 20rem;
+    margin-bottom: 48rem;
+    margin-left: 20rem;
+    padding: 1px;
+    background-color: $c_pink;
+  }
+
+  &-inner {
+    background-color: #000;
+    padding: 64rem 48rem;
+  }
+
+  &-introduction {
+    margin-bottom: 32rem;
+    font-size: 22rem;
+    text-align: justify;
+    @include pc {
+      font-size: 10rem;
+    }
+  }
+
+  &-form {
+    /* %form-style {} */
+
+    &-group {
+      margin-bottom: 64rem;
+      @include pc {
+        margin-bottom: 20rem;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8rem;
+      color: #fff;
+      font-size: 24rem;
+      @include pc {
+        font-size: 9rem;
+      }
+    }
+
+    input[type="text"] {
+      width: 100%;
+      line-height: 56rem;
+      padding: 4rem 16rem;
+      @include pc {
+        line-height: 20rem;
+        font-size: 9rem;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 256rem;
+      @include pc {
+        font-size: 9rem;
+      }
+    }
+
+    &-submit {
+      font-size: 22rem;
+      text-align: center;
+      @include pc {
+        font-size: 10rem;
+      }
+
+      &-button {
+        margin-top: 16rem;
+        width: 464rem;
+        background-color: $c_pink;
+        border-radius: 6rem;
+        color: #fff;
+        font-size: 35rem;
+        line-height: 96rem;
+        @include pc {
+          font-size: 12rem;
+          line-height: 25rem;
+        }
+      }
+    }
+
+    &-confirm {
+      margin-bottom: 48rem;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 22rem;
+      line-height: 1.8;
+      @include pc {
+        font-size: 12rem;
+      }
+
+      dt {
+        min-width: 30%;
+        font-weight: 600;
+      }
+
+      dd {
+        width: 70%;
+        text-align: left;
+        word-break: break-all;
+      }
+    }
+  }
+
+  &-phase {
+    margin-bottom: 32rem;
+    font-size: 28rem;
+    text-align: center;
+    @include pc {
+      font-size: 12rem;
+    }
+  }
+
+  &-sent {
+    font-size: 20rem;
+    line-height: 1.8;
+    text-align: center;
+    @include pc {
+      font-size: 12rem;
+    }
+  }
+}

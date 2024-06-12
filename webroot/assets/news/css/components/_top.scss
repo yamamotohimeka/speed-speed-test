@@ -1,0 +1,141 @@
+.top{
+  font-family: "kozka";
+  &__space{
+    height: 50px;
+    @include pc {
+      height:calc(60vw / (1040 / 100));
+    }
+    @include tab {
+      position: relative;
+      z-index: 5;
+      height:calc(80vw / (768 / 100));
+    }
+  }
+  &__main{
+    &-title{
+      margin-bottom: 20px;
+      padding: 16px 0 20px;
+      border-top:1px solid $yellow ;
+      border-bottom: 1px solid $yellow ;
+      font-size: 48px;
+      letter-spacing: 0.1em;
+      @include pc {
+        margin-bottom:calc(20vw / (1040 / 100));
+        padding:calc(16vw / (1040 / 100)) 0 calc(20vw / (1040 / 100));
+        font-size:calc(48vw / (1040 / 100));
+      }
+      @include tab {
+        margin:0 auto calc(20vw / (768 / 100));
+        padding:calc(12vw / (768 / 100)) 0 calc(18vw / (768 / 100));
+        width:calc(730vw / (768 / 100));
+        font-size:calc(36vw / (768 / 100));
+        
+      }
+    }
+    &-flex{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      gap: 30px;
+      @include pc {
+        margin-bottom:calc(20vw / (1040 / 100));
+        gap:calc(30vw / (1040 / 100));
+      }
+      @include tab {
+        justify-content: space-between;
+        margin: 0 auto calc(16vw / (768 / 100));
+        width: calc(700vw / (768 / 100));
+      }
+      p{
+        &:first-of-type{
+          width: 280px;
+          @include pc {
+            width:calc(280vw / (1040 / 100));
+          }
+          @include tab {
+            width: calc(280vw / (768 / 100));
+          }
+        }
+        width: 340px;
+        text-align: right;
+        font-size: 30px;
+        font-family: "ryumin";
+        letter-spacing: 0.05em;
+        @include pc {
+          width:calc(340vw / (1040 / 100));
+          font-size:calc(30vw / (1040 / 100));
+        }
+        @include tab {
+          width: auto;
+          font-size:calc(36vw / (768 / 100));
+        }
+        span{
+          font-size: 20px;
+          @include pc {
+            font-size:calc(20vw / (1040 / 100));
+          }
+        }
+      }
+    }
+  }
+  .yellow{
+    margin-bottom: 42px;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    @include pc {
+      margin-bottom:calc(42vw / (1040 / 100));
+      font-size:calc(22vw / (1040 / 100));
+    }
+    @include tab {
+      margin-bottom:calc(30vw / (768 / 100));
+      line-height: 1.5;
+      font-size:calc(22vw / (768 / 100));
+    }
+    &-tab{
+      @include tab {
+        margin-bottom:calc(30vw / (768 / 100));
+        line-height: 1.4;
+        font-size:calc(26vw / (768 / 100));
+      }
+    }
+  }
+  .exp{
+    margin-top: 40px;
+    margin-left: 120px;
+    text-align: left;
+    font-family: "Hiragino Sans","ヒラギノ角ゴシック"; font-weight: 300;
+    color: #fff;
+    @include pc {
+      font-size:calc(16vw / (1040 / 100));
+      margin-top:calc(40vw / (1040 / 100));
+      margin-left:calc(120vw / (1040 / 100));
+    }
+    @include tab {
+      position: relative;
+      z-index: 10;
+      margin:calc(30vw / (768 / 100)) auto calc(30vw / (768 / 100)) calc(50vw / (768 / 100));
+      font-size:calc(24vw / (768 / 100));
+    }
+  }
+  .container{
+    position: relative;
+  }
+  img{
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    width: 340px;
+    @include pc {
+      bottom:calc(10vw / (1040 / 100));
+      width:calc(340vw / (1040 / 100));
+    }
+    @include tab {
+      position: relative;
+      z-index: 10;
+      margin:calc(30vw / (768 / 100)) auto;
+      width: calc(500vw / (768 / 100));
+    }
+  }
+}

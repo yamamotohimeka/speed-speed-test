@@ -1,0 +1,88 @@
+.enq_wrap {
+  border: solid 3px transparent;
+  -o-border-image: url(../img/common/bd.png) 1 stretch;
+     border-image: url(../img/common/bd.png) 1 stretch;
+  padding: 50px 50px;
+}
+.enq_wrap .enq_txt {
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+  width: 1056px;
+  margin: 0 auto 40px;
+}
+.enq_wrap > div {
+  justify-content: center;
+}
+.enq_wrap dl > div {
+  margin-bottom: 40px;
+  align-items: center;
+}
+.enq_wrap dl div:last-child {
+  align-items: flex-start;
+}
+.enq_wrap dl .enq_radio {
+  justify-content: start;
+}
+.enq_wrap dl .enq_radio .radio02 {
+  font-size: 20px;
+}
+.enq_wrap dl .enq_radio .radio02::after {
+  top: 7px;
+}
+.enq_wrap dl dt {
+  width: 162px;
+  margin-right: 20px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0em;
+}
+.enq_wrap dl dd {
+  display: inline-block;
+  width: 85%;
+  word-break: break-all;
+}
+.enq_wrap dl dd input,
+.enq_wrap dl dd textarea {
+  background: #fff;
+  width: 874px;
+  height: 36px;
+  color: #000;
+  padding-left: 10px;
+}
+.enq_wrap dl dd textarea {
+  height: 214px;
+}
+.enq_wrap .submit {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.enq_wrap .submit input {
+  background: #ff9100;
+  width: 201px;
+  border-radius: 3px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0em;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enq_box {
+  width: 100%;
+}
+
+.enq_padding {
+  padding: 50px 200px;
+}/*# sourceMappingURL=enquetes.css.map */

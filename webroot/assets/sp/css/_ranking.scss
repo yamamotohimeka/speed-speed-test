@@ -1,0 +1,326 @@
+.ranking {
+  @include pc {
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+  }
+
+  &-switch {
+    margin-bottom: 20rem;
+  }
+
+  &-type {
+    padding: 16rem 0;
+    border-bottom: 1rem solid transparent;
+    background-color: transparent;
+    color: #666;
+    font-size: 30rem;
+    @include pc {
+      font-size: 12rem;
+    }
+
+    &.swiper-slide {
+      @include pc {
+        width: 50% !important;
+      }
+    }
+
+    &.swiper-slide-thumb-active {
+      border-bottom-color: $c_pink;
+      color: $c_pink;
+      @include pc {
+        width: 50% !important;
+      }
+    }
+  }
+
+  &-wrapper {
+    margin-bottom: 40rem;
+    width: calc(100% - 40rem);
+    @include pc {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &-content {
+
+  }
+
+  // 1位
+  &-top {
+    position: relative;
+    margin-bottom: 32rem;
+    padding: 1px;
+    background-image: linear-gradient(45deg, #a96a2f 21%, #54341d 44%, #bd884d 54%, #674d25 65%);
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 20rem;
+      background: url(../img/common/ranking-bg.png) no-repeat center / 100% 100%;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      width: 280rem;
+      width: 42%;
+    }
+
+    &-title {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 8rem;
+      margin-bottom: 20rem;
+      color: #ba272d;
+      font-family: "Noto Serif JP WF";
+
+      .left {
+        line-height: 1.1;
+        font-size: 36rem;
+        letter-spacing: -0.01em;
+        @include pc {
+          font-size: 26rem;
+        }
+      }
+
+      .ja {
+        font-size: 24rem;
+        @include pc {
+          font-size: 16rem;
+        }
+      }
+
+      .right {
+        font-size: 48rem;
+        line-height: 1;
+        @include pc {
+          font-size: 38rem;
+        }
+      }
+
+      .num {
+        font-size: 88rem;
+        @include pc {
+          font-size: 60rem;
+        }
+      }
+    }
+
+    &-meta {
+      margin-bottom: 24rem;
+      padding: 4rem 8rem;
+      border: 1rem dotted #000;
+
+    }
+
+    &-name {
+      color: #000;
+      font-size: 28rem;
+      font-weight: 400;
+      @include pc {
+        font-size: 18rem;
+      }
+    }
+
+    &-sizes {
+      color: #000;
+      font-size: 20rem;
+      word-spacing: 0.1em;
+      @include pc {
+        font-size: 14rem;
+      }
+    }
+
+    &-fee {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24rem;
+      padding-left: 24rem;
+      border: 1rem solid #ff2a97;
+      background-color: #fff;
+      color: #ff2a97;
+      font-size: 20rem;
+      @include pc {
+        font-size: 14rem;
+      }
+
+      .value {
+        width: 96rem;
+        background-color: #ff2a97;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    &-features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .item {
+        width: 49%;
+        background-color: #fff;
+        color: #ff2a97;
+        text-align: center;
+        border: 1rem solid #ff2a97;
+        line-height: 32rem;
+        margin-bottom: 8rem;
+        @include pc {
+          line-height: 22rem;
+          font-size: 12rem;
+        }
+      }
+    }
+
+    &-attendance {
+      margin-bottom: 16rem;
+      border: 1rem solid #5c0e0e;
+      background-image: linear-gradient(to bottom, #b72929 0%, #b72929 50%, #e23737 51%, #e23737 100%);
+      color: #fff;
+      font-size: 20rem;
+      line-height: 1;
+      padding: 4rem 1px 1px 1px;
+      text-align: center;
+      @include pc {
+        font-size: 12rem;
+      }
+
+      &-time {
+        display: block;
+        margin-top: 8rem;
+        background-color: #fff;
+        color: #000;
+        padding: 8rem 0;
+      }
+    }
+
+    &-reserve {
+      margin-top: auto;
+      margin-bottom: 8rem;
+      line-height: 48rem;
+      background-image: url(../img/common/metalplate-l.png), url(../img/common/metalplate-r.png), url(../img/common/metalplate-c.png);
+      background-repeat: no-repeat, no-repeat, repeat-x;
+      background-position: left, right, center;
+      background-size: auto 100%;
+      border-radius: 7rem;
+      color: #000;
+      font-size: 18rem;
+      font-weight: 400;
+      text-align: center;
+      @include pc {
+        font-size: 14rem;
+      }
+    }
+
+    &-image {
+      width: 52%;
+
+      &-main {
+        height: auto;
+      }
+    }
+
+    &-link {
+      @extend %expanded-link;
+    }
+  }
+
+  // 2位以降のランキング
+  &-list {
+    padding: 1px;
+    background-image: linear-gradient(45deg, #a96a2f 21%, #54341d 44%, #bd884d 54%, #674d25 65%);
+
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20rem;
+      background-color: #000;
+    }
+
+    &-item {
+      position: relative;
+      width: 48%;
+      margin-bottom: 32rem;
+      @include pc {
+        width: 24%;
+      }
+    }
+
+    &-head {
+      margin-bottom: 8rem;
+      font-family: "Noto Serif JP WF";
+      font-size: 36rem;
+      font-weight: 400;
+      text-align: center;
+      @include pc {
+        font-size: 12rem;
+        text-align: left;
+        padding-left: 32rem;
+      }
+    }
+
+    &-attendance {
+      display: flex;
+      flex-direction: column;
+      background-image: linear-gradient(to bottom, #b72929 0%, #b72929 50%, #e23737 51%, #e23737 100%);
+      text-align: center;
+      padding: 1px;
+      margin-bottom: 8rem;
+      font-size: 24rem;
+      @include pc {
+        justify-content: center;
+        font-size: 12rem;
+        min-height: 46rem;
+      }
+
+      &-status {
+        padding: 2rem 0;
+      }
+
+      &-time {
+        background-color: #000;
+        padding: 2rem 0;
+        letter-spacing: 0.06em;
+        word-spacing: 0.4em;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: auto;
+
+      &-wrap {
+        position: relative;
+      }
+
+      &-rank {
+        position: absolute;
+        width: 96rem;
+        height: auto;
+        left: 16rem;
+        bottom: 16rem;
+        @include pc {
+          width: 27rem;
+          left: 0rem;
+          top: -84rem;
+        }
+      }
+    }
+
+    &-sizes {
+      font-size: 30rem;
+      text-align: center;
+      @include pc {
+        font-size: 12rem;
+      }
+    }
+
+    &-link {
+      @extend %expanded-link;
+    }
+  }
+}
