@@ -38,7 +38,7 @@
             <li class="item"><a href="http://speed-recruit.net/">女の子求人情報</a></li>
 
             <li class="item"><a href="/story/">ストーリーズ</a></li>
-            <li class="item"><a href="https://mypage.speed-speed.com/" target="_blank">会員ログイン</a></li>
+            <li class="item"><a href="https://mypage.speed-speed.com/" target="_blank">マイページ</a></li>
 
         </ul>
         <ul class="link-menu">

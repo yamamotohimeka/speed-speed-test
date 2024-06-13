@@ -2,6 +2,9 @@
 .schedule {
   .section-title {
     margin-bottom: 32rem;
+    @include pc {
+      margin-bottom: 0;
+    }
   }
 
   .date-selector {

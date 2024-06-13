@@ -2,6 +2,9 @@
 .profile {
   .section-title {
     margin-bottom: 20rem;
+    @include pc {
+      margin-bottom: 0;
+    }
   }
 
   &-border {
@@ -9,7 +12,7 @@
     margin-bottom: 32rem;
     margin-left: 20rem;
     padding: 1px;
-    background-image: linear-gradient(45deg, #a96a2f 21%, #54341d 44%, #bd884d 54%, #674d25 65%);
+    background-color: $c_pink;
     @include pc {
       max-width: 1200px;
       margin: 0 auto;
@@ -27,7 +30,7 @@
       grid-auto-columns: 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto auto;
-      gap: 0px 15rem;
+      gap: 0 10rem;
       align-items: start;
       grid-template-areas:
     "profile-header profile-header-features"
@@ -372,7 +375,7 @@
   &-message {
     margin-bottom: 32rem;
     padding: 14rem 14rem 54rem;
-    border: 0.5px solid #ff0096;
+    border: 0.5px solid $c_pink;
     background-color: #141414;
     @include pc {
       grid-area: profile-message;
@@ -396,7 +399,7 @@
 
     .title {
       margin-bottom: 64rem;
-      background-color: #ff147a;
+      background-color: $c_pink;
       color: #fff;
       font-size: 40rem;
       line-height: 64rem;
@@ -463,7 +466,7 @@
 
     .title {
       margin-bottom: 24rem;
-      background-color: #ff147a;
+      background-color: $c_pink;
       color: #fff;
       font-size: 40rem;
       line-height: 64rem;
@@ -529,7 +532,7 @@
 
     .title {
       margin-bottom: 24rem;
-      background-color: #ff147a;
+      background-color: $c_pink;
       color: #fff;
       font-size: 40rem;
       line-height: 72rem;
@@ -573,7 +576,7 @@
 
     .title {
       margin-bottom: 26rem;
-      background-color: #ff147a;
+      background-color: $c_pink;
       color: #fff;
       font-size: 40rem;
       line-height: 72rem;
@@ -599,12 +602,12 @@
       max-width: 1200px;
       margin: 0 auto;
       padding-top: 0;
-      padding-bottom: 30rem;
+      padding-bottom: 10rem;
     }
 
     .title {
       margin-bottom: 26rem;
-      background-color: #ff147a;
+      background-color: $c_pink;
       color: #fff;
       font-size: 40rem;
       line-height: 72rem;
@@ -687,7 +690,7 @@
       margin: 72rem auto 0;
       width: 564rem;
       @include pc {
-        margin: 20rem auto 0;
+        margin: 10rem auto 0;
       }
     }
   }
@@ -701,15 +704,15 @@
 
     .title {
       margin-bottom: 26rem;
-      background-color: #ff147a;
+      background-color: $c_pink;
       color: #fff;
       font-size: 40rem;
       line-height: 72rem;
       text-align: center;
       @include pc {
-        margin: 30rem 0 0 0;
+        margin: 20rem 0 0 0;
         font-size: 10rem;
-        line-height: 30rem;
+        line-height: 20rem;
       }
     }
 
@@ -718,13 +721,15 @@
       margin-right: 20rem;
       background-color: #fff;
       margin-bottom: 48rem;
-      background-image: linear-gradient(to right, #a96a2f 6%, #50311c 42%, #c68f51 73%, #674d25 100%);
+      background-color: $c_pink;
       position: relative;
       padding: 16rem;
       padding-top: 40rem;
       overflow-x: hidden;
       @include pc {
-        margin: 0 0 20rem;
+        margin: 0 0 10rem;
+        padding-top: 20rem;
+
         .paging {
           align-items: center !important;
         }
@@ -752,21 +757,25 @@
       z-index: 2;
       font-size: 32rem;
 
+
       &-item {
-        border-bottom: 3rem solid #ff0095;
+        border-bottom: 3rem solid $c_pink;
         background-color: #969696;
         color: #fff;
         line-height: 72rem;
         font-size: 24rem;
         text-align: center;
+
+
         @include pc {
           font-size: 10rem;
+          line-height: 40rem;
         }
       }
 
       .swiper-slide-thumb-active {
         background-color: #000;
-        border: 3rem solid #ff0095;
+        border: 3rem solid $c_pink;
         border-bottom: 0;
 
       }
@@ -778,7 +787,7 @@
 
     // 口コミ一覧
     &-body {
-      border: 3rem solid #ff0095;
+      border: 3rem solid $c_pink;
       border-top-width: 0;
       margin-bottom: 48rem;
       @include pc {
@@ -796,7 +805,7 @@
     &-name {
       border-bottom: 1px solid #fff;
       padding: 12rem 24rem;
-      color: #ff0095;
+      color: $c_pink;
       font-size: 36rem;
       @include pc {
         font-size: 10rem;
@@ -825,7 +834,7 @@
     // 口コミ投稿
     &-post {
       background-color: #000;
-      border: 3rem solid #ff0095;
+      border: 3rem solid $c_pink;
       border-top-width: 0;
       padding: 20rem;
     }
@@ -877,7 +886,7 @@
       display: block;
       margin: 32rem auto;
       color: #fff;
-      background-color: #ff0095;
+      background-color: $c_pink;
       text-align: center;
       width: 60%;
       padding: 16rem 0;
@@ -914,7 +923,7 @@
     margin-bottom: 32rem;
     @include pc {
       max-width: 1200px;
-      margin: 30rem auto;
+      margin: 10rem auto;
     }
 
     .button {

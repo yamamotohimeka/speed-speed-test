@@ -2,6 +2,9 @@
 .girls {
   .section-title {
     margin-bottom: 20rem;
+    @include pc {
+      margin-bottom: 0;
+    }
   }
 
   .search-toggle {
@@ -29,6 +32,52 @@
       margin: 0 auto;
     }
 
+    @include pc {
+      .search-form {
+        display: grid;
+        max-width: 1200px;
+        width: 100%;
+        gap: 10rem 10rem;
+        grid-template-columns: 0.3fr 1fr 0.3fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: start;
+        align-items: center;
+        grid-template-areas:
+                  "name name-input tall tall-input"
+                  "age  age-input bust bust-input";
+
+        .label {
+          padding: 4rem 8rem;
+        }
+      }
+
+      :first-child {
+        grid-area: name;
+      }
+      :nth-child(2) {
+        grid-area: name-input;
+      }
+      :nth-child(3) {
+        grid-area: tall;
+      }
+      :nth-child(4) {
+        grid-area: tall-input;
+      }
+      :nth-child(5) {
+        grid-area: age;
+      }
+      :nth-child(6) {
+        grid-area: age-input;
+      }
+      :nth-child(7) {
+        grid-area: bust;
+      }
+      :nth-child(8) {
+        grid-area: bust-input;
+      }
+
+    }
+
     .filter {
       display: flex;
       align-items: center;
@@ -38,7 +87,7 @@
       font-size: 32rem;
       margin-bottom: 0;
       @include pc {
-        font-size: 12rem;
+        font-size: 9rem;
       }
 
       .title {
@@ -53,7 +102,7 @@
         padding: 24rem 16rem;
         @include pc {
           flex-direction: row;
-          padding: 14rem 0 20rem 0;
+          padding: 0 0 10rem 0;
         }
       }
     }
@@ -64,7 +113,7 @@
       font-size: 28rem;
       @include pc {
         padding: 0 20rem;
-        font-size: 12rem;
+        font-size: 9rem;
       }
     }
 
@@ -73,8 +122,11 @@
       padding: 20rem;
       justify-content: space-between;
       @include pc {
-        padding: 14rem 0 20rem 0;
+        padding: 0;
         font-size: 11rem;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10rem;
       }
     }
 
@@ -84,8 +136,14 @@
       width: 67vw;
       font-size: 24rem;
       @include pc {
-        width: 30vw;
-        font-size: 11rem;
+        width: 180rem;
+        font-size: 9rem;
+      }
+    }
+
+    input[name="data[Search][name]"] {
+      @include pc {
+        width: 255rem;
       }
     }
 
@@ -97,8 +155,8 @@
       margin-top: 32rem;
       font-size: 28rem;
       @include pc {
-        margin-top: 18rem;
-        font-size: 13rem;
+        margin-top: 10rem;
+        font-size: 10rem;
         width: 123rem;
       }
     }

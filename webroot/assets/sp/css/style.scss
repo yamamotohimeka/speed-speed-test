@@ -78,6 +78,7 @@ i {
   outline: 0;
 }
 
+
 input[type="text"],
 input[type="checkbox"],
 input[type="radio"],
@@ -91,7 +92,8 @@ textarea {
 }
 
 input[type="text"],
-textarea {
+textarea,
+.capsize, .ltgt, select[name="data[Search][size_c]"] {
   padding: 4rem 8rem;
 }
 
@@ -108,6 +110,8 @@ select {
 button {
   border: 0;
   font-family: inherit;
+
+
 }
 
 body {
@@ -721,7 +725,7 @@ h3 {
   transform: translateY(100%);
   transition: 0.2s ease;
   @include pc {
-    display: none;
+    display: none
   }
 
   &.show {
@@ -755,18 +759,19 @@ h3 {
   padding-left: 32rem;
   /* height: 100rem; */
   background: url(../img/common/section-title.png) no-repeat center / 100% 100%;
-  font-family: "Noto Serif JP WF";
   font-weight: 400;
   font-size: 40rem;
   line-height: 100rem;
+
   @include pc {
-    font-size: 16rem;
+    font-size: 10rem;
     max-width: $breakpoint-pc;
-    margin: 0 auto 20rem;
-    background-size: 100% 72px;
+    background-color: $c-pink;
+    color: #fff;
+    margin: 0 auto;
+    background-image: none;
+    text-align: left;
     line-height: inherit;
-    padding: 6rem 0 6rem 100rem;
-    border: solid 1px $c_orange;
   }
 }
 
@@ -783,7 +788,6 @@ h3 {
   border-bottom: 1px solid $c_orange;
   border-top: 1px solid $c_orange;
   padding: 25rem;
-
   flex-wrap: nowrap;
   overflow-x: scroll;
 
@@ -793,7 +797,7 @@ h3 {
 
   @include pc {
     justify-content: center;
-    margin: 20rem auto;
+    margin: 0 auto 10rem auto;
     padding: 5rem;
     font-size: 10rem;
     width: 100%;
@@ -822,6 +826,11 @@ h3 {
       padding: 5rem 10rem;
       width: 100%;
       min-width: 30%;
+
+      &:hover {
+        color: $c-pink;
+      }
+
       @include pc {
         font-size: 10rem;
       }
@@ -862,7 +871,7 @@ h3 {
   @include pc {
     width: 200rem;
     font-size: 9rem;
-    line-height: 26rem;
+    line-height: 16rem;
   }
 }
 
@@ -1047,6 +1056,11 @@ h3 {
       font-size: 37rem;
       font-weight: bold;
       border-bottom: 1.5px solid $c_pink;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
       @include pc {
         margin: 0 auto;
         font-size: 14rem;

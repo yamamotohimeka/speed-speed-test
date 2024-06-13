@@ -8,6 +8,9 @@
 
   &-switch {
     margin-bottom: 20rem;
+    @include pc {
+      margin-bottom: 10rem;
+    }
   }
 
   &-type {
@@ -21,6 +24,11 @@
     }
 
     &.swiper-slide {
+
+      &:hover {
+        color: $c-pink;
+      }
+
       @include pc {
         width: 50% !important;
       }
@@ -53,7 +61,10 @@
     position: relative;
     margin-bottom: 32rem;
     padding: 1px;
-    background-image: linear-gradient(45deg, #a96a2f 21%, #54341d 44%, #bd884d 54%, #674d25 65%);
+    background-color: $c-pink;
+    @include pc {
+      margin-bottom: 10rem;
+    }
 
     &-inner {
       display: flex;
@@ -177,8 +188,8 @@
 
     &-attendance {
       margin-bottom: 16rem;
-      border: 1rem solid #5c0e0e;
-      background-image: linear-gradient(to bottom, #b72929 0%, #b72929 50%, #e23737 51%, #e23737 100%);
+      border: 1rem solid #b72929;
+      background-color: #b72929;
       color: #fff;
       font-size: 20rem;
       line-height: 1;
@@ -231,7 +242,7 @@
   // 2位以降のランキング
   &-list {
     padding: 1px;
-    background-image: linear-gradient(45deg, #a96a2f 21%, #54341d 44%, #bd884d 54%, #674d25 65%);
+    background-color: $c_pink;
 
     &-inner {
       display: flex;
@@ -266,7 +277,9 @@
     &-attendance {
       display: flex;
       flex-direction: column;
-      background-image: linear-gradient(to bottom, #b72929 0%, #b72929 50%, #e23737 51%, #e23737 100%);
+
+      background-color: #b72929;
+
       text-align: center;
       padding: 1px;
       margin-bottom: 8rem;

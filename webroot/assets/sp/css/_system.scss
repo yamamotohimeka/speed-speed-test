@@ -20,13 +20,20 @@
 
   &-tab {
     padding: 0 40rem;
-    margin-bottom: 32rem;
+    margin-bottom: 10rem;
+
 
     .swiper-slide {
       padding: 16rem 0;
       font-size: 32rem;
       color: #646464;
       background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: $c-pink;
+      }
+
       @include pc {
         padding: 8rem 0;
         font-size: 12rem;
@@ -114,6 +121,7 @@
     font-size: 26rem;
     @include pc {
       font-size: 12rem;
+      padding-top: 10rem;
       justify-content: center;
     }
 
@@ -171,6 +179,9 @@
         width: 100%;
         padding: 2px 0;
         display: block;
+        @include pc {
+          height: 10rem;
+        }
       }
 
       tbody {
@@ -305,6 +316,7 @@
       text-align: center;
       @include pc {
         font-size: 12rem;
+        padding-bottom: 0;
       }
     }
   }
@@ -327,7 +339,7 @@
       margin-bottom: 24rem;
       @include pc {
         width: 24%;
-        margin-bottom: 8rem;
+        margin-bottom: 10rem;
       }
     }
 

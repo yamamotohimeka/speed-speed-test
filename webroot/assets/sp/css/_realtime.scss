@@ -2,6 +2,9 @@
 .realtime {
   .section-title {
     margin-bottom: 32rem;
+    @include pc {
+      margin-bottom: 0;
+    }
   }
 
   .realtime-toggle {
@@ -22,7 +25,7 @@
       max-width: 1200px;
       margin: 0 auto 10rem auto;
       font-size: 14rem;
-      padding: 8rem 0;
+      padding: 10rem 0;
       top: 28rem;
     }
 

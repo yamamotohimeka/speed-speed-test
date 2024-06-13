@@ -6,7 +6,7 @@
 
   &-post {
     margin: 0 16rem 64rem;
-    background-image: linear-gradient(45deg, #a96a2f 21%, #54341d 44%, #bd884d 54%, #674d25 65%);
+    background-color: $c-pink;
     padding: 1px;
     @include pc {
       margin: 0 auto 10rem auto;
@@ -72,7 +72,7 @@
     align-items: center;
     padding: 1px;
     margin-bottom: 32rem;
-    background: linear-gradient(to bottom, #f1a200 0%, #d28900 50%, #ffb83d 51%, #ffa100 100%);
+    background-image: linear-gradient(to bottom, #b72929 0%, #b72929 50%, #e23737 51%, #e23737 100%);;
     font-size: 28rem;
     text-align: center;
     @include pc {
@@ -204,7 +204,7 @@
   &-rate {
     display: block;
     margin-bottom: 8rem;
-    color: #ffa100;
+    color: $c_pink;
     font-size: 28rem;
     @include pc {
       font-size: 8rem;

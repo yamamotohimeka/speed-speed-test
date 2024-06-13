@@ -13,7 +13,8 @@
     background-color: $c_pink;
     font-size: 28rem;
     @include pc {
-      font-size: 12rem;
+      margin-bottom: 20rem;
+      font-size: 10rem;
     }
 
     .inner {
@@ -31,19 +32,24 @@
     margin-bottom: 48rem;
     padding: 0 20rem;
     @include pc {
+      margin-bottom: 20rem;
       text-align: center;
     }
   }
 
   @include pc {
     .access-address {
-      font-size: 12rem;
+      font-size: 10rem;
       text-align: center;
     }
   }
 
   &-guide {
     padding: 0 20rem;
+    @include pc {
+      padding: 0 10rem;
+
+    }
 
     &-title {
       margin-bottom: 20rem;
@@ -54,8 +60,9 @@
       line-height: 60rem;
       text-align: center;
       @include pc {
-        line-height: 30rem;
-        font-size: 12rem;
+        margin-bottom: 10rem;
+        line-height: 20rem;
+        font-size: 10rem;
       }
     }
 
@@ -64,7 +71,7 @@
       margin-bottom: 48rem;
       @include pc {
         max-width: 750px;
-        margin: 0 auto 48rem;
+        margin: 0 auto 20rem;
       }
 
       &::before {
@@ -86,11 +93,15 @@
       margin-bottom: 48rem;
       width: 540rem;
       @include pc {
+        margin-bottom: 10rem;
         width: 250rem;
       }
 
       .swiper-dots {
         margin-top: 32rem;
+        @include pc {
+          margin-top: 10rem;
+        }
       }
     }
   }
@@ -99,6 +110,11 @@
   &-area {
     margin-bottom: 32rem;
     padding: 32rem 20rem 0;
+    @include pc {
+      margin-bottom: 10rem;
+      padding: 10rem 10rem 0;
+
+    }
 
     &-name {
       margin-bottom: 16rem;
@@ -106,7 +122,11 @@
       background-color: $c_pink;
       font-size: 30rem;
       @include pc {
-        font-size: 12rem;
+        font-size: 10rem;
+        margin-bottom: 10rem;
+        padding: 5rem 10rem;
+
+
       }
     }
   }
@@ -118,8 +138,15 @@
       border-bottom: 1px solid #999;
       font-size: 26rem;
       line-height: 64rem;
+
+      &:hover {
+        color: $c-pink;
+      }
+
       @include pc {
-        font-size: 12rem;
+        padding: 0 10rem;
+        font-size: 10rem;
+        line-height: 30rem;
       }
     }
   }

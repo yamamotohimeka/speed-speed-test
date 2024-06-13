@@ -7,6 +7,10 @@
 
   .section-title {
     margin-bottom: 20rem;
+    @include pc {
+      margin-bottom: 10rem;
+
+    }
   }
 
   &-block {
@@ -16,6 +20,10 @@
     padding-bottom: 16rem;
     border: 1rem solid $c_pink;
     background-color: #231815;
+    @include pc {
+      margin-bottom: 10rem;
+      padding-bottom: 10rem;
+    }
 
     &-title {
       margin-bottom: 20rem;
@@ -23,7 +31,9 @@
       background-color: $c_pink;
       font-size: 28rem;
       @include pc {
-        font-size: 12rem;
+        margin-bottom: 10rem;
+        padding-bottom: 10rem;
+        font-size: 10rem;
       }
     }
   }
@@ -32,7 +42,9 @@
     padding: 0 40rem;
     font-size: 28rem;
     @include pc {
-      font-size: 12rem;
+      padding: 0 10rem;
+
+      font-size: 10rem;
     }
   }
 
@@ -41,7 +53,9 @@
     margin-bottom: 32rem;
     font-size: 30rem;
     @include pc {
-      font-size: 11rem;
+      margin-top: 10rem;
+      margin-bottom: 30rem;
+      font-size: 10rem;
     }
   }
 
@@ -54,7 +68,8 @@
     border: 1rem solid #88878b;
     font-size: 26rem;
     @include pc {
-      font-size: 12rem;
+      margin-top: 20rem;
+      font-size: 10rem;
     }
 
     .label {
@@ -65,6 +80,9 @@
       width: 40%;
       border-right: 1rem solid #88878b;
       text-align: center;
+      @include pc {
+        padding: 0 10rem;
+      }
 
       &:not(:last-of-type) {
         border-bottom: 1rem solid #88878b;
@@ -76,6 +94,9 @@
       flex-wrap: wrap;
       padding: 16rem;
       width: 60%;
+      @include pc {
+        padding: 10rem;
+      }
 
       &:not(:last-of-type) {
         border-bottom: 1rem solid #88878b;
@@ -88,6 +109,7 @@
         background-color: #fff;
         @include pc {
           font-size: 9rem;
+          padding: 4rem 10rem;
         }
       }
     }
@@ -100,6 +122,9 @@
     .deny-hour .checkbox {
       width: 100%;
       margin-bottom: 8rem;
+      @include pc {
+        margin-bottom: 10rem;
+      }
     }
 
     .deny-day .checkbox {
@@ -116,13 +141,16 @@
       border: 1rem solid #88878b;
       font-size: 24rem;
       @include pc {
-        font-size: 12rem;
+        font-size: 10rem;
       }
 
       dt {
         padding: 16rem;
         border-right: 1rem solid #88878b;
         width: 48%;
+        @include pc {
+          padding: 10rem;
+        }
 
         &:not(:last-of-type) {
           border-bottom: 1rem solid #88878b;
@@ -132,6 +160,9 @@
       dd {
         padding: 16rem;
         width: 52%;
+        @include pc {
+          padding: 10rem;
+        }
 
         &:not(:last-of-type) {
           border-bottom: 1rem solid #88878b;
@@ -152,7 +183,9 @@
       font-size: 24rem;
       text-align: center;
       @include pc {
-        font-size: 12rem;
+        font-size: 10rem;
+        padding: 0 10rem;
+
       }
     }
   }
@@ -164,6 +197,10 @@
 
   .status-girl {
     margin-bottom: 20px;
+    @include pc {
+      margin-bottom: 10px;
+
+    }
   }
 }
 

@@ -51,8 +51,9 @@
     background-image: url(../img/shop-entrance/nippon-bg-sp.jpg);
     background-size: cover;
     @include pc {
-      background-size: 60% auto;
-      background-position: center;
+      background-image: url(../../img/shop-entrance/nippon-entrance-bg.jpg);
+      background-size: 100% auto;
+      background-position: top;
     }
   }
 }
@@ -135,7 +136,7 @@
     'MS PMincho',
     serif;
     @include pc {
-      top: 1vw;
+      top: 2vw;
       font-size: 12rem;
     }
 

@@ -13,11 +13,10 @@
     margin-bottom: 48rem;
     padding: 20rem;
     color: #000;
-    border: 1rem solid #9d622c;
+    border: 1rem solid $c_pink;
     @include pc {
       margin: 0 auto;
       max-width: 1200px;
-
       display: grid;
       grid-template-columns: auto auto 1fr;
       grid-template-rows: auto auto 1fr;
@@ -26,6 +25,7 @@
     "stories-icon stories-head stories-head"
     "img img stories-timestamp"
     "img img stories-text";
+      padding: 10rem;
 
       img, video {
         max-width: 450px;
@@ -52,8 +52,10 @@
     border-radius: 50%;
     background-image: linear-gradient(to right, #ea5902 0%, #d5000f 69%, #d40077 100%);
     @include pc {
-      width: 80rem;
-      height: 80rem;
+      padding: 3rem;
+      width: 60rem;
+      height: 60rem;
+      margin-right: 10rem;
       grid-area: stories-icon;
       align-self: center;
       justify-self: end;
@@ -66,6 +68,9 @@
     object-fit: cover;
     border-radius: 50%;
     border: 5rem solid #fff;
+    @include pc {
+      border: 3rem solid #fff;
+    }
   }
 
   &-status {
@@ -75,7 +80,7 @@
     background-color: $c_pink;
     font-size: 26rem;
     @include pc {
-      font-size: 12rem;
+      font-size: 10rem;
     }
 
     &-attendance {
@@ -114,7 +119,7 @@
     color: $c_pink;
     letter-spacing: 0.1em;
     @include pc {
-      font-size: 12rem;
+      font-size: 10rem;
       grid-area: stories-timestamp;
       text-align: left;
       margin-bottom: 5rem;
@@ -126,7 +131,7 @@
     font-size: 28rem;
     line-height: 1.6;
     @include pc {
-      font-size: 12rem;
+      font-size: 10rem;
       grid-area: stories-text;
       align-self: start;
     }
