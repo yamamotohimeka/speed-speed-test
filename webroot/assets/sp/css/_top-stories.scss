@@ -61,15 +61,15 @@
     transition: padding 0.3s ease;
 
     @include pc {
-      padding: 10rem 23rem;
+      padding: 5rem 23rem;
       &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
+        border-radius: 8px;
         background-color: #7b7b7b;
       }
       &::-webkit-scrollbar {
         background: #000;
         width: 5px;
-        height: 10px;
+        height: 8px;
       }
     }
 
@@ -91,7 +91,8 @@
     margin-bottom: 8rem;
     font-size: 22rem;
     @include pc {
-      font-size: 9rem;
+      font-size: 8rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -103,10 +104,10 @@
     border-radius: 50%;
     background-image: linear-gradient(to right, #ea5902 0%, #d5000f 69%, #d40077 100%);
     @include pc {
-      margin-bottom: 0rem;
-      width: 60rem;
-      height: 60rem;
-      padding: 2rem;
+      margin-bottom: -7rem;
+      width: 35rem;
+      height: 35rem;
+      padding: 1.5rem;
     }
   }
 
@@ -128,7 +129,7 @@
     font-size: 24rem;
     white-space: nowrap;
     @include pc {
-      font-size: 9rem;
+      font-size: 8rem;
     }
   }
 
