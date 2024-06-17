@@ -110,8 +110,6 @@ select {
 button {
   border: 0;
   font-family: inherit;
-
-
 }
 
 body {
@@ -192,7 +190,6 @@ h3 {
 .global-header {
   position: relative;
 
-
   &-meta {
     border-bottom: 1px solid #ff009c;
 
@@ -247,7 +244,6 @@ h3 {
           width: 152rem;
           padding: 10rem 0 0 0;
         }
-
       }
 
     }
@@ -296,7 +292,9 @@ h3 {
       height: 40rem;
       padding-top: 20rem;
       padding-left: 8rem;
-
+      top: initial;
+      bottom: 25rem;
+      right: 16rem;
     }
 
     .rect {
@@ -373,6 +371,11 @@ h3 {
 
     &.top {
       animation: fadeInTop 0.2s ease both;
+      @include pc {
+        top: initial;
+        bottom: 25rem;
+        right: 16rem;
+      }
     }
 
     &.bottom {
@@ -390,16 +393,21 @@ h3 {
       height: 140rem;
       right: 3rem;
       @include pc {
-        top: 45rem;
+        top: -133%;
         width: 40rem;
         height: 40rem;
+        right: 0;
       }
+
     }
 
     &.top {
       .member,
       .member-group {
         top: 115%;
+        @include pc {
+          top: -133%;
+        }
       }
     }
 
@@ -408,6 +416,7 @@ h3 {
         top: -125%;
         @include pc {
           top: -133%;
+          right: 2%;
         }
       }
 
