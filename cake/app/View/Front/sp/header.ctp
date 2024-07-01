@@ -1,4 +1,5 @@
 <header class="global-header">
+    <h1 hidden><?php echo SITE_NAME; ?></h1>
     <div class="global-header-meta">
         <div class="global-header-meta-inner">
             <a href="/top/">
@@ -43,7 +44,7 @@
         </ul>
         <ul class="link-menu">
             <img alt="大阪 風俗 ホテルヘルス(ホテヘル) <?php echo SITE_NAME; ?> Top （難波 日本橋 京橋 梅田）"
-                 src="/assets/sp/img/common/header_logo.png">
+                 src="/assets/sp/img/top/group/header_logo.png">
             <div class="link-menu-box">
                 <li class="item"><a href="https://speed-speed.com/top" target="_blank">スピードグループ</a></li>
                 <li class="item"><a href="https://umeda.speed-speed.com/top/" target="_blank">梅田店</a></li>

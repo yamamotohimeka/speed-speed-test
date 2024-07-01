@@ -203,7 +203,6 @@
   .filter {
     border-top-color: transparent;
     @include pc {
-
       border-top-color: $c_pink;
     }
 
