@@ -10,7 +10,9 @@
       width: 100%;
       max-width: $breakpoint-pc;
     }
-
+    .swiper-wrapper {
+      justify-content: center;
+    }
     .swiper-slide-next {
       opacity: 0.4;
     }
