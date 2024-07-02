@@ -72,12 +72,6 @@
                 spaceBetween: 0,
                 loop: true,
                 autoHeight: false,
-                breakpoints: {
-                    1200: {
-                        slidesPerView: 1.8,
-                        spaceBetween: 20,
-                    }
-                }
             });
         </script>
     </section>
@@ -90,15 +84,16 @@
     ?>
   <h3 class="top_bnr"><a href="/special/" target="_blank"><img src="/assets/special/img/bnr_main.jpg"></a></h3>
 <?php endif; ?> -->
-
-<h3 class="top_bnr">
-    <a href="/special/" target="_blank">
-        <img src="/assets/special/img/special3/sp/bnr_special.gif"></a></h3>
-<h3 class="top_bnr">
-    <a href="https://umeda.esthetique-osaka.com/top/" target="_blank">
-        <img src="/assets/sp/img/common/tique-umeda-entrance.gif" alt="関西 大阪 風俗　大阪回春性感エステ ティーク エステティーク"/>
-    </a>
-</h3>
+<div class="top_bnr_wrap">
+    <h3 class="top_bnr">
+        <a href="/special/" target="_blank">
+            <img src="/assets/special/img/special3/sp/bnr_special.gif"></a></h3>
+    <h3 class="top_bnr">
+        <a href="https://umeda.esthetique-osaka.com/top/" target="_blank">
+            <img src="/assets/sp/img/common/tique-umeda-entrance.gif" alt="関西 大阪 風俗　大阪回春性感エステ ティーク エステティーク"/>
+        </a>
+    </h3>
+</div>
 <!-- <h3 class="top_bnr"><a href="https://nanba.mrs-sakura.com/top/" target="_blank"><img src="/assets/sp/img/common/sp-top-okusama.gif"></a></h3>-->
 <!--<h3 class="top_bnr"><a href="https://mrs-sakura.com/" target="_blank"><img src="/assets/sp/img/common/grand-open.gif"></a></h3>-->
 
